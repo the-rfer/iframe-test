@@ -6,10 +6,15 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(history());
-// Servir arquivos estáticos da pasta 'dist'
+
+app.use((_, res, next) => {
+    res.removeHeader('X-Frame-Options');
+    res.setHeader('Content-Security-Policy', `frame-ancestors *`);
+    next();
+});
+
 app.use(express.static(path.join(path.resolve(), 'dist')));
 
-// Iniciar o servidor
 app.listen(PORT, () => {
     console.log(`Servidor: http://localhost:${PORT}`);
 });
