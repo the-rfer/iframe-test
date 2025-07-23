@@ -1,0 +1,16 @@
+@import 'tailwindcss';
+
+@plugin "daisyui" {
+    themes: nord --default --prefersdark;
+}
+
+@layer base {
+    @apply font-sans antialiased;
+}
+
+html,
+body {
+    overscroll-behavior: none;
+    touch-action: manipulation;
+    overflow-x: hidden;
+}
