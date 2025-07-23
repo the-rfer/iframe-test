@@ -6,7 +6,7 @@ export default function Maps() {
         <div className='mx-auto pb-20 md:max-w-2xl min-h-screen'>
             <MobileHeader title='Mapa do evento' />
 
-            <div className='relative h-96'>
+            <div className='relative md:mt-8 h-96'>
                 <Map />
             </div>
         </div>

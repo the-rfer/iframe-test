@@ -109,7 +109,7 @@ export default function App() {
                         </div>
                         <div className='flex justify-between'>
                             <span className='text-gray-600'>Início:</span>
-                            <span className='font-medium'>10:00 AM</span>
+                            <span className='font-medium'>12:00</span>
                         </div>
                     </div>
                 </div>

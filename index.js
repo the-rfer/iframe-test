@@ -13,6 +13,15 @@ app.use((_, res, next) => {
     next();
 });
 
+app.get('/api/download/:file', (req, res) => {
+    console.log('Download request received');
+
+    const file = req.params.file;
+    const filePath = path.join(path.resolve(), 'files', file);
+
+    res.sendFile(filePath);
+});
+
 app.use(express.static(path.join(path.resolve(), 'dist')));
 
 app.listen(PORT, () => {

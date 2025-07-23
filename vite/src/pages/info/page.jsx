@@ -1,50 +1,10 @@
-import { Clock, MapPin, Music } from 'lucide-react';
+import { Clock, MapPin, Music, ScrollText } from 'lucide-react';
 import { MobileHeader } from '@/components/mobile-header';
+import { Calendar } from '@/components/calendar';
+import { schedule, fileList } from '@/data/static';
+import { Downloads } from '@/components/downloads';
 
 export default function Information() {
-    const schedule = [
-        {
-            day: 'Quinta, 14 de Agosto',
-            events: [
-                {
-                    time: '10:00 AM',
-                    event: 'Gates Open',
-                    location: 'All Entrances',
-                },
-                {
-                    time: '12:00 PM',
-                    event: 'Opening Ceremony',
-                    location: 'Main Stage',
-                },
-                {
-                    time: '7:00 PM',
-                    event: 'Headliner: The Electric Waves',
-                    location: 'Main Stage',
-                },
-            ],
-        },
-        {
-            day: 'Sexta, 15 de Agosto',
-            events: [
-                {
-                    time: '10:00 AM',
-                    event: 'Gates Open',
-                    location: 'All Entrances',
-                },
-                {
-                    time: '1:00 PM',
-                    event: 'Acoustic Sessions',
-                    location: 'Acoustic Stage',
-                },
-                {
-                    time: '8:00 PM',
-                    event: 'Headliner: Midnight Symphony',
-                    location: 'Main Stage',
-                },
-            ],
-        },
-    ];
-
     return (
         <div className='mx-auto pb-20 md:max-w-2xl min-h-screen'>
             <MobileHeader title='Informação' />
@@ -59,7 +19,7 @@ export default function Information() {
                         <div className='flex items-center'>
                             <Clock className='mr-2 w-4 h-4 text-gray-500' />
                             <span className='text-gray-600'>
-                                14-15 de Agosto de 2025 • 10:00 - 23:00
+                                14 e 15 de Agosto de 2025 • 12:00 - Madrugada
                             </span>
                         </div>
                         <div className='flex items-center'>
@@ -86,37 +46,22 @@ export default function Information() {
                         </h2>
                     </div>
 
-                    <div className='divide-y divide-gray-100'>
-                        {schedule.map((day, dayIndex) => (
-                            <div key={dayIndex} className='p-4'>
-                                <h3 className='mb-3 font-semibold text-gray-800 text-lg'>
-                                    {day.day}
-                                </h3>
-                                <div className='space-y-3'>
-                                    {day.events.map((event, eventIndex) => (
-                                        <div
-                                            key={eventIndex}
-                                            className='flex items-start'
-                                        >
-                                            <div className='bg-blue-100 mt-0.5 mr-3 px-2 py-1 rounded min-w-fit font-medium text-blue-800 text-xs'>
-                                                {event.time}
-                                            </div>
-                                            <div className='flex-1'>
-                                                <div className='font-medium text-gray-800'>
-                                                    {event.event}
-                                                </div>
-                                                <div className='text-gray-600 text-sm'>
-                                                    {event.location}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        ))}
+                    <Calendar schedule={schedule} />
+                </div>
+
+                <div className='bg-white shadow-sm rounded-lg overflow-hidden'>
+                    <div className='p-4 border-gray-100 border-b'>
+                        <h2 className='flex items-center font-semibold text-gray-800 text-lg'>
+                            <ScrollText className='mr-2 w-5 h-5 text-amber-600' />
+                            Fliers
+                        </h2>
                     </div>
+                    {/* aqui */}
+                    <Downloads files={fileList} />
                 </div>
             </div>
         </div>
     );
 }
+
+// <a href='/api/download/<filename.ext>' download> Download </a>

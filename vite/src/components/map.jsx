@@ -22,19 +22,21 @@ export default function Map() {
             attributionControl={false}
             zoomControl={true}
             zoom={16}
-            minZoom={10}
-            maxZoom={18}
+            minZoom={15}
+            // maxZoom={18}
             center={[32.676623, -16.900641]}
             maxBoundsViscosity={1.0}
             maxBounds={[
-                [29.627841, -17.257971],
-                [33.128176, -16.277011],
+                [32.67, -16.9135],
+                [32.6905, -16.885],
             ]}
         >
-            {/* FIXME: MUDAR BASEMAP PARA PERMITIR UM ZOOM MAIOR */}
             <TileLayer
                 attribution='Mapa: <a href="https://www.arcgis.com/index.html">ArcGIS</a>'
-                url='https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}'
+                // url='https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}'
+                // url='https://tiles-eu.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}@2x.png' // ou alidade_satellite
+
+                url='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
                 //DEBUGGING:
                 eventHandlers={{
                     tileerror: (e) => {
