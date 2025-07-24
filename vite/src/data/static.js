@@ -126,4 +126,8 @@ export const fileList = [
         name: 'Arraial do Monte 2025',
         file: 'arraial.png',
     },
+    {
+        name: 'Condicionamento das estradas',
+        file: 'estradas.pdf',
+    },
 ];

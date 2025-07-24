@@ -23,8 +23,8 @@ export function Index() {
                         Arraial do Monte
                     </h1>
                     <p className='text-gray-100/80 text-base md:text-lg tracking-wide'>
-                        Uma celebração tradicional em honra de Nossa Senhora do
-                        Monte
+                        Descubra tudo sobre o Arraial do Monte 2025:
+                        informações, novidades e detalhes do evento.
                     </p>
                 </header>
 
