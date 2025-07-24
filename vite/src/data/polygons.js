@@ -1,4 +1,4 @@
-const venda_de_carne = {
+export const venda_de_carne = {
     type: 'FeatureCollection',
     name: 'Espaoparaavendadecarnesverdes_5',
     crs: {
@@ -225,7 +225,7 @@ const venda_de_carne = {
     ],
 };
 
-const comes_e_bebes = {
+export const comes_e_bebes = {
     type: 'FeatureCollection',
     name: 'Espaoparaavendadecomesebebes_4',
     crs: {
@@ -614,7 +614,7 @@ const comes_e_bebes = {
     ],
 };
 
-const venda_de_velas = {
+export const venda_de_velas = {
     type: 'FeatureCollection',
     name: 'espaoparaavendadevelas_1',
     crs: {
@@ -1273,7 +1273,7 @@ const venda_de_velas = {
     ],
 };
 
-const meio_motorizado = {
+export const meio_motorizado = {
     type: 'FeatureCollection',
     name: 'espaoparaavendaemmeiomotorizado_2',
     crs: {
@@ -1878,7 +1878,7 @@ const meio_motorizado = {
     ],
 };
 
-const pequenos_balcoes = {
+export const pequenos_balcoes = {
     type: 'FeatureCollection',
     name: 'espaoparaavendedepequenosbalcoes_3',
     crs: {
@@ -2427,12 +2427,4 @@ const pequenos_balcoes = {
             },
         },
     ],
-};
-
-export {
-    venda_de_carne,
-    comes_e_bebes,
-    venda_de_velas,
-    meio_motorizado,
-    pequenos_balcoes,
 };

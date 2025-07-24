@@ -46,11 +46,6 @@ export default function Map() {
                 }}
             />
 
-            {/* <Polygon positions={monteData.position}>
-                    <Tooltip direction='top' sticky>
-                        {monteData.name}
-                    </Tooltip>
-                </Polygon> */}
             <RenderPolygons poly={venda_de_carne} />
             <RenderPolygons poly={comes_e_bebes} />
             <RenderPolygons poly={venda_de_velas} />
@@ -82,5 +77,6 @@ function swapCoordsArray(coords) {
         return [coords[1], coords[0]];
     }
 
+    // chamada recursiva para deep nest arrays
     return coords.map(swapCoordsArray);
 }
