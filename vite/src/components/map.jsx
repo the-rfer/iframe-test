@@ -1,12 +1,13 @@
 import 'leaflet/dist/leaflet.css';
+import 'leaflet-arrowheads';
 import {
     MapContainer,
     TileLayer,
     ScaleControl,
     Polygon,
+    Polyline,
     Tooltip,
 } from 'react-leaflet';
-
 import {
     venda_de_carne,
     comes_e_bebes,
@@ -14,8 +15,31 @@ import {
     meio_motorizado,
     pequenos_balcoes,
 } from '@/data/polygons';
+import { acesso_local_1, sentido_unico_1 } from '@/data/transito/11-12-13';
+import {
+    sentido_unico_2,
+    via_interrompida_1,
+    acesso_local_2,
+} from '@/data/transito/14-15';
+import {
+    via_interrompida_2,
+    sentido_unico_3,
+    acesso_local_3,
+} from '@/data/transito/17';
 
-export default function Map() {
+const day1 = [acesso_local_1, sentido_unico_1];
+const day2 = [sentido_unico_2, via_interrompida_1, acesso_local_2];
+const day3 = [via_interrompida_2, sentido_unico_3, acesso_local_3];
+
+const barracas = [
+    venda_de_carne,
+    comes_e_bebes,
+    venda_de_velas,
+    meio_motorizado,
+    pequenos_balcoes,
+];
+
+export default function Map({ day }) {
     return (
         <MapContainer
             className='z-0 w-full h-full'
@@ -46,20 +70,30 @@ export default function Map() {
                 }}
             />
 
-            <RenderPolygons poly={venda_de_carne} />
-            <RenderPolygons poly={comes_e_bebes} />
-            <RenderPolygons poly={venda_de_velas} />
-            <RenderPolygons poly={meio_motorizado} />
-            <RenderPolygons poly={pequenos_balcoes} />
+            {barracas.map((poly, i) => {
+                return <RenderPolygons key={i} poly={poly} type='poly' />;
+            })}
+
+            <Transito day={day} />
 
             <ScaleControl position='bottomleft' imperial={false} />
         </MapContainer>
     );
 }
 
-function RenderPolygons({ poly }) {
+function RenderPolygons({ poly, type, styles }) {
     return poly.features.map((feature, index) => {
-        return (
+        return type === 'line' ? (
+            <Polyline
+                key={index}
+                positions={swapCoordsArray(feature.geometry.coordinates)}
+                styles={styles}
+            >
+                <Tooltip direction='top' sticky>
+                    {feature.properties.Entity}
+                </Tooltip>
+            </Polyline>
+        ) : (
             <Polygon
                 key={index}
                 positions={swapCoordsArray(feature.geometry.coordinates)}
@@ -79,4 +113,42 @@ function swapCoordsArray(coords) {
 
     // chamada recursiva para deep nest arrays
     return coords.map(swapCoordsArray);
+}
+
+//FIXME:
+// 1. styles não estão a ser aplicados corretamente
+// 2. arrowheads nas lines não estão a funcionar
+function Transito({ day }) {
+    switch (day) {
+        case 1:
+            return day1.map((poly, i) => (
+                <RenderPolygons
+                    key={i}
+                    poly={poly}
+                    type='line'
+                    styles={{ color: 'red', weight: 3 }}
+                />
+            ));
+
+        case 2:
+            return day2.map((poly, i) => (
+                <RenderPolygons
+                    key={i}
+                    poly={poly}
+                    type='line'
+                    styles={{ color: 'red', weight: 3 }}
+                />
+            ));
+        case 3:
+            return day3.map((poly, i) => (
+                <RenderPolygons
+                    key={i}
+                    poly={poly}
+                    type='line'
+                    styles={{ color: 'red', weight: 3 }}
+                />
+            ));
+        default:
+            return null;
+    }
 }
