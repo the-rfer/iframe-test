@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router';
 
-export function Index() {
+export default function Index() {
     return (
         <div
             className='relative flex justify-center items-center px-4 min-h-screen'

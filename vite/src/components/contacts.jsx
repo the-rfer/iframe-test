@@ -6,30 +6,30 @@ export function ContactList({ contacts }) {
             {contacts.map((category, categoryIndex) => (
                 <div
                     key={categoryIndex}
-                    className='bg-white shadow-sm rounded-lg overflow-hidden'
+                    className='bg-base-300 shadow-sm rounded-lg overflow-hidden'
                 >
-                    <div className='p-4 border-gray-100 border-b'>
+                    <div className='p-4 border-b border-base-100'>
                         <div className='flex items-center'>
                             <div
                                 className={`p-2 rounded-lg mr-3 ${category.color}`}
                             >
                                 <category.icon className='w-5 h-5' />
                             </div>
-                            <h2 className='font-semibold text-gray-800 text-lg'>
+                            <h2 className='font-semibold text-lg'>
                                 {category.category}
                             </h2>
                         </div>
                     </div>
 
-                    <div className='divide-y divide-gray-100'>
+                    <div className='divide-y divide-base-100'>
                         {category.contacts.map((contact, contactIndex) => (
                             <div key={contactIndex} className='p-4'>
                                 <div className='flex justify-between items-start'>
                                     <div className='flex-1'>
-                                        <h3 className='mb-1 font-medium text-gray-800'>
+                                        <h3 className='mb-1 font-medium'>
                                             {contact.name}
                                         </h3>
-                                        <p className='mb-2 text-gray-600 text-sm'>
+                                        <p className='mb-2 text-sm'>
                                             {contact.description}
                                         </p>
                                     </div>

@@ -1,11 +1,9 @@
 export function Calendar({ schedule }) {
     return (
-        <div className='divide-y divide-gray-100'>
+        <div className='divide-y divide-base-100'>
             {schedule.map((day, dayIndex) => (
                 <div key={dayIndex} className='p-4'>
-                    <h3 className='mb-3 font-semibold text-gray-800 text-lg'>
-                        {day.day}
-                    </h3>
+                    <h3 className='mb-3 font-semibold text-lg'>{day.day}</h3>
                     <div className='space-y-3'>
                         {day.events.map((event, eventIndex) => (
                             <div key={eventIndex} className='flex items-start'>
@@ -14,10 +12,10 @@ export function Calendar({ schedule }) {
                                 </div>
 
                                 <div className='flex-1'>
-                                    <div className='font-medium text-gray-800'>
+                                    <div className='font-medium'>
                                         {event.event}
                                     </div>
-                                    <div className='text-gray-600 text-sm'>
+                                    <div className='text-sm'>
                                         {event.location}
                                     </div>
                                 </div>

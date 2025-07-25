@@ -10,26 +10,24 @@ export default function Information() {
             <MobileHeader title='Informação' />
 
             <div className='space-y-6 mx-auto px-4 py-6 container'>
-                <div className='bg-white shadow-sm p-6 rounded-lg'>
-                    <h2 className='flex items-center mb-4 font-semibold text-gray-800 text-xl'>
+                <div className='bg-base-300 shadow-sm p-6 rounded-lg'>
+                    <h2 className='flex items-center mb-4 font-semibold text-xl'>
                         <Music className='mr-2 w-5 h-5 text-blue-600' />
                         Arraial do Monte 2025
                     </h2>
                     <div className='gap-4 grid text-sm'>
                         <div className='flex items-center'>
-                            <Clock className='mr-2 w-4 h-4 text-gray-500' />
-                            <span className='text-gray-600'>
+                            <Clock className='mr-2 w-4 h-4 text-base' />
+                            <span>
                                 14 e 15 de Agosto de 2025 • 12:00 - Madrugada
                             </span>
                         </div>
                         <div className='flex items-center'>
-                            <MapPin className='mr-2 w-4 h-4 text-gray-500' />
-                            <span className='text-gray-600'>
-                                Monte, Funchal, Ilha da Madeira
-                            </span>
+                            <MapPin className='mr-2 w-4 h-4 text-base' />
+                            <span>Monte, Funchal, Ilha da Madeira</span>
                         </div>
                     </div>
-                    <p className='mt-4 text-gray-700'>
+                    <p className='mt-4'>
                         O Arraial do Monte é uma celebração tradicional que
                         reúne música, gastronomia e muita animação. Venha viver
                         dois dias de festa com concertos ao vivo, barracas de
@@ -38,9 +36,9 @@ export default function Information() {
                     </p>
                 </div>
 
-                <div className='bg-white shadow-sm rounded-lg overflow-hidden'>
-                    <div className='p-4 border-gray-100 border-b'>
-                        <h2 className='flex items-center font-semibold text-gray-800 text-lg'>
+                <div className='bg-base-300 shadow-sm rounded-lg overflow-hidden'>
+                    <div className='p-4 border-b border-base-100'>
+                        <h2 className='flex items-center font-semibold text-lg'>
                             <Clock className='mr-2 w-5 h-5 text-green-600' />
                             Calendário
                         </h2>
@@ -49,9 +47,9 @@ export default function Information() {
                     <Calendar schedule={schedule} />
                 </div>
 
-                <div className='bg-white shadow-sm rounded-lg overflow-hidden'>
-                    <div className='p-4 border-gray-100 border-b'>
-                        <h2 className='flex items-center font-semibold text-gray-800 text-lg'>
+                <div className='bg-base-300 shadow-sm rounded-lg overflow-hidden'>
+                    <div className='p-4 border-b border-base-100'>
+                        <h2 className='flex items-center font-semibold text-lg'>
                             <ScrollText className='mr-2 w-5 h-5 text-amber-600' />
                             Fliers
                         </h2>

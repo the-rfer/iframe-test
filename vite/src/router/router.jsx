@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router';
-import { Index } from '@/pages/index/page.jsx';
+import Index from '@/pages/index/page.jsx';
 import App from '@/pages/app/page.jsx';
 import Contacts from '@/pages/contact/page';
 import Information from '@/pages/info/page';
