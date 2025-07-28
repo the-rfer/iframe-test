@@ -9,6 +9,8 @@ export const sentido_unico_2 = {
         {
             type: 'Feature',
             properties: {
+                Entity: 'sentido_unico',
+                orientation: 'sul',
                 OBJECTID: 679.0,
                 IDDTCC: '3103',
                 IDFR: '02',
@@ -25,6 +27,9 @@ export const sentido_unico_2 = {
                 SHAPE_Le_1: 1877.4407933499999,
                 layer: null,
                 path: null,
+            },
+            styles: {
+                color: '#FFFF00',
             },
             geometry: {
                 type: 'MultiLineString',
@@ -96,6 +101,8 @@ export const sentido_unico_2 = {
         {
             type: 'Feature',
             properties: {
+                Entity: 'sentido_unico',
+                orientation: 'sul',
                 OBJECTID: 646.0,
                 IDDTCC: '3103',
                 IDFR: '02',
@@ -112,6 +119,9 @@ export const sentido_unico_2 = {
                 SHAPE_Le_1: 297.75475371200002,
                 layer: 'MONTE RUAS',
                 path: 'C:/Users/humbe/OneDrive/Ambiente de Trabalho/transito/transito/MONTE RUAS.shp',
+            },
+            styles: {
+                color: '#FFFF00',
             },
             geometry: {
                 type: 'MultiLineString',
@@ -142,6 +152,8 @@ export const sentido_unico_2 = {
         {
             type: 'Feature',
             properties: {
+                Entity: 'sentido_unico',
+                orientation: 'sul',
                 OBJECTID: 865.0,
                 IDDTCC: '3103',
                 IDFR: '02',
@@ -158,6 +170,9 @@ export const sentido_unico_2 = {
                 SHAPE_Le_1: 699.17427481699997,
                 layer: 'MONTE RUAS',
                 path: 'C:/Users/humbe/OneDrive/Ambiente de Trabalho/transito/transito/MONTE RUAS.shp',
+            },
+            styles: {
+                color: '#FFFF00',
             },
             geometry: {
                 type: 'MultiLineString',
@@ -184,6 +199,8 @@ export const sentido_unico_2 = {
         {
             type: 'Feature',
             properties: {
+                Entity: 'sentido_unico',
+                orientation: 'sul',
                 OBJECTID: 870.0,
                 IDDTCC: '3103',
                 IDFR: '02',
@@ -200,6 +217,9 @@ export const sentido_unico_2 = {
                 SHAPE_Le_1: 319.81823828099999,
                 layer: 'MONTE RUAS',
                 path: 'C:/Users/humbe/OneDrive/Ambiente de Trabalho/transito/transito/MONTE RUAS.shp',
+            },
+            styles: {
+                color: '#FFFF00',
             },
             geometry: {
                 type: 'MultiLineString',
@@ -248,6 +268,8 @@ export const sentido_unico_2 = {
         {
             type: 'Feature',
             properties: {
+                Entity: 'sentido_unico',
+                orientation: 'norte',
                 OBJECTID: 1152.0,
                 IDDTCC: '3103',
                 IDFR: '02',
@@ -264,6 +286,9 @@ export const sentido_unico_2 = {
                 SHAPE_Le_1: 2036.54561188,
                 layer: 'MONTE RUAS',
                 path: 'C:/Users/humbe/OneDrive/Ambiente de Trabalho/transito/transito/MONTE RUAS.shp',
+            },
+            styles: {
+                color: '#FFFF00',
             },
             geometry: {
                 type: 'MultiLineString',
@@ -520,6 +545,8 @@ export const sentido_unico_2 = {
         {
             type: 'Feature',
             properties: {
+                Entity: 'sentido_unico',
+                orientation: 'norte',
                 OBJECTID: 2253.0,
                 IDDTCC: '3103',
                 IDFR: '02',
@@ -536,6 +563,9 @@ export const sentido_unico_2 = {
                 SHAPE_Le_1: 7306.9742969899999,
                 layer: 'MONTE RUAS',
                 path: 'C:/Users/humbe/OneDrive/Ambiente de Trabalho/transito/transito/MONTE RUAS.shp',
+            },
+            styles: {
+                color: '#FFFF00',
             },
             geometry: {
                 type: 'MultiLineString',
@@ -588,6 +618,8 @@ export const sentido_unico_2 = {
         {
             type: 'Feature',
             properties: {
+                Entity: 'sentido_unico',
+                orientation: 'sul',
                 OBJECTID: 2409.0,
                 IDDTCC: '3103',
                 IDFR: '02',
@@ -604,6 +636,9 @@ export const sentido_unico_2 = {
                 SHAPE_Le_1: 2573.54770001,
                 layer: 'MONTE RUAS',
                 path: 'C:/Users/humbe/OneDrive/Ambiente de Trabalho/transito/transito/MONTE RUAS.shp',
+            },
+            styles: {
+                color: '#FFFF00',
             },
             geometry: {
                 type: 'MultiLineString',
@@ -696,6 +731,8 @@ export const sentido_unico_2 = {
         {
             type: 'Feature',
             properties: {
+                Entity: 'sentido_unico',
+                orientation: 'norte',
                 OBJECTID: 791.0,
                 IDDTCC: '3103',
                 IDFR: '02',
@@ -712,6 +749,9 @@ export const sentido_unico_2 = {
                 SHAPE_Le_1: 586.74744452899995,
                 layer: 'MONTE RUAS',
                 path: 'C:/Users/humbe/OneDrive/Ambiente de Trabalho/transito/transito/MONTE RUAS.shp',
+            },
+            styles: {
+                color: '#FFFF00',
             },
             geometry: {
                 type: 'MultiLineString',
@@ -750,6 +790,8 @@ export const sentido_unico_2 = {
         {
             type: 'Feature',
             properties: {
+                Entity: 'sentido_unico',
+                orientation: 'sul',
                 OBJECTID: 865.0,
                 IDDTCC: '3103',
                 IDFR: '02',
@@ -766,6 +808,9 @@ export const sentido_unico_2 = {
                 SHAPE_Le_1: 699.17427481699997,
                 layer: 'MONTE RUAS',
                 path: 'C:/Users/humbe/OneDrive/Ambiente de Trabalho/transito/transito/MONTE RUAS.shp',
+            },
+            styles: {
+                color: '#FFFF00',
             },
             geometry: {
                 type: 'MultiLineString',
@@ -809,6 +854,10 @@ export const via_interrompida_1 = {
                 layer: 'MONTE RUAS',
                 path: 'C:/Users/humbe/OneDrive/Ambiente de Trabalho/transito/transito/MONTE RUAS.shp',
             },
+            styles: {
+                strokeWidth: 8,
+                color: '#FF0000',
+            },
             geometry: {
                 type: 'MultiLineString',
                 coordinates: [
@@ -843,6 +892,10 @@ export const via_interrompida_1 = {
                 layer: null,
                 path: null,
             },
+            styles: {
+                strokeWidth: 8,
+                color: '#FF0000',
+            },
             geometry: {
                 type: 'MultiLineString',
                 coordinates: [
@@ -875,6 +928,10 @@ export const via_interrompida_1 = {
                 SHAPE_Le_1: 585.47264031700001,
                 layer: 'MONTE RUAS',
                 path: 'C:/Users/humbe/OneDrive/Ambiente de Trabalho/transito/transito/MONTE RUAS.shp',
+            },
+            styles: {
+                strokeWidth: 8,
+                color: '#FF0000',
             },
             geometry: {
                 type: 'MultiLineString',
@@ -932,6 +989,10 @@ export const via_interrompida_1 = {
                 SHAPE_Le_1: 763.87759705899998,
                 layer: 'MONTE RUAS',
                 path: 'C:/Users/humbe/OneDrive/Ambiente de Trabalho/transito/transito/MONTE RUAS.shp',
+            },
+            styles: {
+                strokeWidth: 8,
+                color: '#FF0000',
             },
             geometry: {
                 type: 'MultiLineString',
@@ -991,6 +1052,10 @@ export const via_interrompida_1 = {
                 layer: 'MONTE RUAS',
                 path: 'C:/Users/humbe/OneDrive/Ambiente de Trabalho/transito/transito/MONTE RUAS.shp',
             },
+            styles: {
+                strokeWidth: 8,
+                color: '#FF0000',
+            },
             geometry: {
                 type: 'MultiLineString',
                 coordinates: [
@@ -1039,6 +1104,10 @@ export const via_interrompida_1 = {
                 SHAPE_Le_1: 1877.4407933499999,
                 layer: null,
                 path: null,
+            },
+            styles: {
+                strokeWidth: 8,
+                color: '#FF0000',
             },
             geometry: {
                 type: 'MultiLineString',
@@ -1101,6 +1170,10 @@ export const via_interrompida_1 = {
                 layer: 'MONTE RUAS',
                 path: 'C:/Users/humbe/OneDrive/Ambiente de Trabalho/transito/transito/MONTE RUAS.shp',
             },
+            styles: {
+                strokeWidth: 8,
+                color: '#FF0000',
+            },
             geometry: {
                 type: 'MultiLineString',
                 coordinates: [
@@ -1153,6 +1226,10 @@ export const acesso_local_2 = {
                 SHAPE_Le_1: 267.90190866099999,
                 layer: null,
                 path: null,
+            },
+            styles: {
+                strokeWidth: 8,
+                color: '#9370DB',
             },
             geometry: {
                 type: 'MultiLineString',
@@ -1219,6 +1296,10 @@ export const acesso_local_2 = {
                 layer: null,
                 path: null,
             },
+            styles: {
+                strokeWidth: 8,
+                color: '#9370DB',
+            },
             geometry: {
                 type: 'MultiLineString',
                 coordinates: [
@@ -1264,6 +1345,10 @@ export const acesso_local_2 = {
                 SHAPE_Le_1: 2059.8662733400001,
                 layer: 'MONTE RUAS',
                 path: 'C:/Users/humbe/OneDrive/Ambiente de Trabalho/transito/transito/MONTE RUAS.shp',
+            },
+            styles: {
+                strokeWidth: 8,
+                color: '#9370DB',
             },
             geometry: {
                 type: 'MultiLineString',
@@ -1313,6 +1398,10 @@ export const acesso_local_2 = {
                 layer: 'MONTE RUAS',
                 path: 'C:/Users/humbe/OneDrive/Ambiente de Trabalho/transito/transito/MONTE RUAS.shp',
             },
+            styles: {
+                strokeWidth: 8,
+                color: '#9370DB',
+            },
             geometry: {
                 type: 'MultiLineString',
                 coordinates: [
@@ -1358,6 +1447,10 @@ export const acesso_local_2 = {
                 SHAPE_Le_1: 1877.4407933499999,
                 layer: null,
                 path: null,
+            },
+            styles: {
+                strokeWidth: 8,
+                color: '#9370DB',
             },
             geometry: {
                 type: 'MultiLineString',

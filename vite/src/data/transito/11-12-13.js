@@ -26,6 +26,10 @@ export const acesso_local_1 = {
                 layer: null,
                 path: null,
             },
+            styles: {
+                strokeWidth: 8,
+                color: '#9370DB',
+            },
             geometry: {
                 type: 'MultiLineString',
                 coordinates: [
@@ -85,6 +89,8 @@ export const sentido_unico_1 = {
         {
             type: 'Feature',
             properties: {
+                orientation: 'norte',
+                Entity: 'sentido_unico',
                 OBJECTID: 2253.0,
                 IDDTCC: '3103',
                 IDFR: '02',
@@ -101,6 +107,9 @@ export const sentido_unico_1 = {
                 SHAPE_Le_1: 7306.9742969899999,
                 layer: 'MONTE RUAS',
                 path: 'C:/Users/humbe/OneDrive/Ambiente de Trabalho/transito/transito/MONTE RUAS.shp',
+            },
+            styles: {
+                color: '#FFFF00',
             },
             geometry: {
                 type: 'MultiLineString',
@@ -153,6 +162,8 @@ export const sentido_unico_1 = {
         {
             type: 'Feature',
             properties: {
+                Entity: 'sentido_unico',
+                orientation: 'sul',
                 OBJECTID: 2409.0,
                 IDDTCC: '3103',
                 IDFR: '02',
@@ -169,6 +180,9 @@ export const sentido_unico_1 = {
                 SHAPE_Le_1: 2573.54770001,
                 layer: 'MONTE RUAS',
                 path: 'C:/Users/humbe/OneDrive/Ambiente de Trabalho/transito/transito/MONTE RUAS.shp',
+            },
+            styles: {
+                color: '#FFFF00',
             },
             geometry: {
                 type: 'MultiLineString',

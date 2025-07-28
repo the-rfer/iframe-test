@@ -1,17 +1,32 @@
 import { MobileHeader } from '@/components/mobile-header';
 import { useState } from 'react';
 import Map from '@/components/map';
+import { useIsMobile } from '@/lib/useMobile';
+import { Legend } from '@/components/map';
+import { calculateCurrentEventDay } from '@/lib/date';
 
 export default function Maps() {
-    const [day, setDay] = useState(1);
+    const [day, setDay] = useState(calculateCurrentEventDay() || 1);
+    const isMobile = useIsMobile();
 
     return (
-        <div className='mx-auto pb-20 md:max-w-2xl min-h-screen'>
+        <div className='mx-auto pb-20 md:max-w-4xl min-h-screen'>
             <MobileHeader title='Mapa do evento' />
 
-            <div className='relative md:mt-8 h-96'>
+            <div
+                className={`relative md:mt-8 ${
+                    isMobile ? 'h-[450px]' : 'h-[600px]'
+                }`}
+            >
                 <Map day={day} />
             </div>
+            {/* FIXME: corrigir styles para desktop */}
+
+            {isMobile && (
+                <div className='flex mt-2 min-w-full'>
+                    <Legend day={day} />
+                </div>
+            )}
             {/* COMPONENTE DE TESTES */}
             <TESTComponent day={day} setDay={setDay} />
         </div>

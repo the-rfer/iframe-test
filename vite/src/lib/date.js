@@ -31,3 +31,27 @@ export function dateCounter() {
 
     return message;
 }
+
+export function calculateCurrentEventDay() {
+    const today = new Date();
+    const localToday = new Date(
+        today.getFullYear(),
+        today.getMonth(),
+        today.getDate()
+    );
+
+    const day13 = new Date(2025, 7, 13);
+    const day14 = new Date(2025, 7, 14);
+    const day15 = new Date(2025, 7, 15);
+
+    if (localToday <= day13) {
+        return 1;
+    } else if (
+        localToday.getTime() === day14.getTime() ||
+        localToday.getTime() === day15.getTime()
+    ) {
+        return 2;
+    } else {
+        return 3;
+    }
+}
