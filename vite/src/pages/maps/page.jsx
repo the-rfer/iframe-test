@@ -21,7 +21,7 @@ export default function Maps() {
     const isMobile = useIsMobile();
 
     return (
-        <div className='mx-auto pb-20 md:max-w-4xl min-h-screen'>
+        <div className='mx-auto pb-20 md:max-w-[1500px] min-h-screen'>
             <MobileHeader title='Mapa do evento' />
 
             <div

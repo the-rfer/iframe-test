@@ -69,6 +69,17 @@ export function Filter({ day, setDay, barracas, setBarracas }) {
                             />
                             Dia 17
                         </label>
+
+                        <label className='label'>
+                            <input
+                                type='radio'
+                                name='transito'
+                                className='radio'
+                                onChange={() => setDay(0)}
+                                defaultChecked={day === 0 ? true : false}
+                            />
+                            Ocultar informação trânsito
+                        </label>
                     </div>
                 </fieldset>
 

@@ -267,8 +267,6 @@ export function Legend({ day, barracaState }) {
             break;
     }
 
-    if (!data) return;
-
     return (
         <div
             className={
@@ -281,24 +279,25 @@ export function Legend({ day, barracaState }) {
                 <h4 className='mb-2 font-bold'>Legenda</h4>
                 <div>
                     <div className='mb-2 pb-2 border-gray-200/50 border-b'>
-                        {data.map((day, index) => {
-                            return (
-                                <div
-                                    key={index}
-                                    className='flex items-center gap-2'
-                                >
-                                    <div className={day.tw}>
-                                        {day.css && (
-                                            <div
-                                                className='w-0 h-0'
-                                                style={day.css}
-                                            />
-                                        )}
+                        {day > 0 &&
+                            data.map((day, index) => {
+                                return (
+                                    <div
+                                        key={index}
+                                        className='flex items-center gap-2'
+                                    >
+                                        <div className={day.tw}>
+                                            {day.css && (
+                                                <div
+                                                    className='w-0 h-0'
+                                                    style={day.css}
+                                                />
+                                            )}
+                                        </div>
+                                        <span>{day.legend}</span>
                                     </div>
-                                    <span>{day.legend}</span>
-                                </div>
-                            );
-                        })}
+                                );
+                            })}
                     </div>
                     <div>
                         {legenda
