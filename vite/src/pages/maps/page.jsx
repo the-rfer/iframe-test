@@ -4,9 +4,18 @@ import Map from '@/components/map';
 import { useIsMobile } from '@/lib/useMobile';
 import { Legend } from '@/components/map';
 import { calculateCurrentEventDay } from '@/lib/date';
+import { Filter } from '@/components/filter';
 
 export default function Maps() {
     const [day, setDay] = useState(calculateCurrentEventDay() || 1);
+    const [barracas, setBarracas] = useState({
+        comes_e_bebes: true,
+        venda_de_carne: true,
+        venda_de_velas: true,
+        pequenos_balcoes: true,
+        meio_motorizado: true,
+    });
+
     const isMobile = useIsMobile();
 
     return (
@@ -18,17 +27,21 @@ export default function Maps() {
                     isMobile ? 'h-[450px]' : 'h-[600px]'
                 }`}
             >
-                <Map day={day} />
+                <Map day={day} barracaState={barracas} />
             </div>
-            {/* FIXME: corrigir styles para desktop */}
 
             {isMobile && (
                 <div className='flex mt-2 min-w-full'>
                     <Legend day={day} />
                 </div>
             )}
-            {/* COMPONENTE DE TESTES */}
-            <TESTComponent day={day} setDay={setDay} />
+
+            <Filter
+                day={day}
+                setDay={setDay}
+                barracas={barracas}
+                setBarracas={setBarracas}
+            />
         </div>
     );
 }

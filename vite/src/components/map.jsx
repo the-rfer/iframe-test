@@ -53,14 +53,14 @@ const day3 = [
     acesso_local_3,
 ];
 const barracas = [
-    venda_de_carne,
-    comes_e_bebes,
-    venda_de_velas,
-    meio_motorizado,
-    pequenos_balcoes,
+    { slug: 'venda_de_carne', poly: venda_de_carne },
+    { slug: 'comes_e_bebes', poly: comes_e_bebes },
+    { slug: 'venda_de_velas', poly: venda_de_velas },
+    { slug: 'meio_motorizado', poly: meio_motorizado },
+    { slug: 'pequenos_balcoes', poly: pequenos_balcoes },
 ];
 
-export default function Map({ day }) {
+export default function Map({ day, barracaState }) {
     const isMobile = useIsMobile();
 
     return (
@@ -91,9 +91,11 @@ export default function Map({ day }) {
             <Pane name='upper' pane='upper' style={{ zIndex: 500 }} />
             <Pane name='lower' pane='lower' style={{ zIndex: 499 }} />
 
-            {barracas.map((poly, i) => {
-                return <RenderPolygons key={i} poly={poly} type='poly' />;
-            })}
+            {barracas
+                .filter(({ slug }) => barracaState[slug])
+                .map(({ poly, slug }) => (
+                    <RenderPolygons key={slug} poly={poly} type='poly' />
+                ))}
 
             <Transito day={day} />
 
@@ -263,7 +265,7 @@ export function Legend({ day }) {
             <div className='bg-base-100 bg-opacity-90 shadow-md p-3 rounded-lg w-[100%] leaflet-control'>
                 <h4 className='mb-2 font-bold'>Legenda</h4>
                 <div>
-                    <div>
+                    <div className='mb-2 pb-2 border-gray-200/50 border-b'>
                         {data.map((day, index) => {
                             return (
                                 <div
