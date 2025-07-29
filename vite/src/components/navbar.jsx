@@ -43,7 +43,7 @@ export function DesktopNav() {
                         />
                     </div> */}
                 </div>
-                <p className='font-bold'>Festas do Monte 2025</p>
+                <p className='font-bold'>Festa do Monte 2025</p>
             </div>
 
             <div className='flex flex-row flex-none items-center gap-4'>

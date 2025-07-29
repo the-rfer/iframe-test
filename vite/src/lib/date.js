@@ -20,13 +20,13 @@ export function dateCounter() {
     const isPast = localToday > eventEnd;
 
     if (isDayBefore) {
-        message = 'Começa já amanha!';
+        message = 'Começa já amanha.';
     } else if (isEventPeriod) {
-        message = 'Já começou!';
+        message = 'Já começou.';
     } else if (isPast) {
-        message = 'O evento já terminou';
+        message = 'O evento já terminou.';
     } else if (diffDays > 1) {
-        message = `Faltam ${diffDays} dias para começar!`;
+        message = `Faltam ${diffDays} dias para o início do evento.`;
     }
 
     return message;

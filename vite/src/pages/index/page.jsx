@@ -20,11 +20,16 @@ export default function Index() {
             >
                 <header className='space-y-2'>
                     <h1 className='drop-shadow-lg font-extrabold text-green-200 text-5xl md:text-6xl leading-tight'>
-                        Festas do Monte
+                        Festa do Monte
                     </h1>
                     <p className='text-gray-100/80 text-base md:text-lg tracking-wide'>
-                        Descubra tudo sobre o festas do Monte 2025: informações,
-                        novidades e detalhes do evento.
+                        A Festa do Monte é uma das mais emblemáticas tradições
+                        da Madeira, unindo fé e celebração. De 5 a 13 de agosto,
+                        as novenas preparam espiritualmente os fiéis para os
+                        dias principais — 14 e 15 de agosto — marcados por
+                        procissões, devoção e muita animação. Os arruamentos
+                        enchem-se de flores, sabores típicos, num dos eventos
+                        mais emblemáticos do ano.
                     </p>
                 </header>
 

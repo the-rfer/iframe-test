@@ -27,12 +27,39 @@ export default function Information() {
                             <span>Monte, Funchal, Ilha da Madeira</span>
                         </div>
                     </div>
-                    <p className='mt-4'>
-                        As festas do Monte é uma celebração tradicional que
-                        reúne música, gastronomia e muita animação. Venha viver
-                        dois dias de festa com concertos ao vivo, barracas de
-                        comida regional, folclore e atividades para toda a
-                        família.
+                    <p className='mt-4 text-justify'>
+                        A Festa do Monte constitui um dos momentos mais
+                        significativos da tradição madeirense, integrando fé,
+                        cultura e celebração popular numa expressão coletiva.
+                        Realizada em honra de Nossa Senhora do Monte, padroeira
+                        da cidade do Funchal, esta celebração destaca-se como
+                        uma das mais relevantes manifestações religiosas e
+                        culturais da Madeira, reconhecida nacional e
+                        internacionalmente, e que atrai anualmente milhares de
+                        fiéis, emigrantes e visitantes.
+                        <br />
+                        <br />
+                        A edição de 2025 inicia-se a 5 de agosto, com a
+                        realização das novenas e missas diárias até ao dia 13,
+                        proporcionando um período de preparação espiritual e
+                        fortalecimento comunitário. Nos dias 14 e 15 de agosto
+                        decorrem os momentos solenes da Festa, incluindo a
+                        tradicional procissão em honra de Nossa Senhora do
+                        Monte, vivenciada com profunda devoção por todos os
+                        participantes.
+                        <br />
+                        <br />
+                        Paralelamente ao carácter religioso, a Festa do Monte
+                        assume também uma dimensão social e cultural, com os
+                        percursos até ao santuário adornados pelos tradicionais
+                        corredores de flores. As áreas de restauração e venda de
+                        produtos regionais — desde a gastronomia típica aos
+                        doces e artesanato local — contribuem para dinamizar
+                        este evento, que se afirma como um dos mais importantes
+                        no calendário anual da ilha. Este equilíbrio entre fé e
+                        convívio popular reforça a importância da Festa do Monte
+                        como um elemento fundamental da identidade e património
+                        madeirense.
                     </p>
                 </div>
 
@@ -51,8 +78,17 @@ export default function Information() {
                     <div className='p-4 border-b border-base-100'>
                         <h2 className='flex items-center font-semibold text-lg'>
                             <ScrollText className='mr-2 w-5 h-5 text-amber-600' />
-                            Fliers
+                            Informações úteis
                         </h2>
+                        <p className='mt-2 text-sm text-justify'>
+                            Nesta secção encontra tudo o que precisa para
+                            aproveitar ao máximo a Festa do Monte: horários das
+                            novenas e missas, informações sobre o teleférico,
+                            percursos das procissões, pontos de apoio, serviços
+                            disponíveis e outras orientações práticas. <br />
+                            Consulte aqui os detalhes essenciais para uma
+                            experiência organizada, segura e memorável.{' '}
+                        </p>
                     </div>
                     {/* aqui */}
                     <Downloads files={fileList} />
