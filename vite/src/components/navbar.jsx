@@ -2,6 +2,9 @@ import { NavLink, useLocation } from 'react-router';
 import { Home, MapPin, Phone, Info } from 'lucide-react';
 import { ModeToggle } from '@/components/theme-toggle';
 import logo from '@/assets/brasao.png';
+import icon from '@/assets/icon.png';
+// import logob from '@/assets/text-black.png';
+// import logow from '@/assets/text-white.png';
 
 const navItems = [
     { href: '/app', icon: Home, label: 'Home' },
@@ -17,11 +20,30 @@ export function DesktopNav() {
         <div className='bg-base-200 shadow-sm m-2 mx-auto rounded-lg max-w-full lg:max-w-[80%] navbar'>
             <div className='flex flex-row flex-1 items-center gap-2'>
                 <div className='avatar'>
-                    <div className='rounded w-12'>
-                        <img src={logo} alt='Cidade do Funchal' />
+                    <div className='mr-2 w-12 h-12'>
+                        <img
+                            src={logo}
+                            alt='icon igreja do monte'
+                            className='object-cover' //
+                        />
                     </div>
+                    <div className='w-12 h-12'>
+                        <img
+                            src={icon}
+                            alt='icon igreja do monte'
+                            className='object-cover' //
+                        />
+                    </div>
+                    {/* NOTE: utilização do logo completo da paróquia fica uma caquinha */}
+                    {/* <div className='w-40 h-12'>
+                        <img
+                            src={logob}
+                            alt='icon igreja do monte'
+                            className='object-cover' //
+                        />
+                    </div> */}
                 </div>
-                <p className='font-bold'>Arraial do Monte 2025</p>
+                <p className='font-bold'>Festas do Monte 2025</p>
             </div>
 
             <div className='flex flex-row flex-none items-center gap-4'>

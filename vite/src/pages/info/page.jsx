@@ -13,7 +13,7 @@ export default function Information() {
                 <div className='bg-base-300 shadow-sm p-6 rounded-lg'>
                     <h2 className='flex items-center mb-4 font-semibold text-xl'>
                         <Music className='mr-2 w-5 h-5 text-blue-600' />
-                        Arraial do Monte 2025
+                        Festas do Monte 2025
                     </h2>
                     <div className='gap-4 grid text-sm'>
                         <div className='flex items-center'>
@@ -28,7 +28,7 @@ export default function Information() {
                         </div>
                     </div>
                     <p className='mt-4'>
-                        O Arraial do Monte é uma celebração tradicional que
+                        As festas do Monte é uma celebração tradicional que
                         reúne música, gastronomia e muita animação. Venha viver
                         dois dias de festa com concertos ao vivo, barracas de
                         comida regional, folclore e atividades para toda a

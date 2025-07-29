@@ -3,7 +3,7 @@ import 'leaflet-polylinedecorator';
 import L from 'leaflet';
 import { useEffect } from 'react';
 import { useIsMobile } from '@/lib/useMobile';
-import { acesso_local_1, sentido_unico_1 } from '@/data/transito/11-12-13';
+import { legenda, day_1, day_2, day_3 } from '@/data/static';
 import {
     MapContainer,
     TileLayer,
@@ -12,6 +12,7 @@ import {
     Polyline,
     Tooltip,
     useMap,
+    Pane,
 } from 'react-leaflet';
 import {
     venda_de_carne,
@@ -21,20 +22,36 @@ import {
     pequenos_balcoes,
 } from '@/data/polygons';
 import {
+    acesso_local_1,
+    sentido_unico_1,
+    circulacao_habitual_1,
+} from '@/data/transito/11-12-13';
+import {
     sentido_unico_2,
     via_interrompida_1,
     acesso_local_2,
+    circulacao_habitual_2,
 } from '@/data/transito/14-15';
 import {
     via_interrompida_2,
     sentido_unico_3,
     acesso_local_3,
+    circulacao_habitual_3,
 } from '@/data/transito/17';
 
-const day1 = [acesso_local_1, sentido_unico_1];
-const day2 = [sentido_unico_2, via_interrompida_1, acesso_local_2];
-const day3 = [via_interrompida_2, sentido_unico_3, acesso_local_3];
-
+const day1 = [circulacao_habitual_1, acesso_local_1, sentido_unico_1];
+const day2 = [
+    circulacao_habitual_2,
+    sentido_unico_2,
+    acesso_local_2,
+    via_interrompida_1,
+];
+const day3 = [
+    via_interrompida_2,
+    circulacao_habitual_3,
+    sentido_unico_3,
+    acesso_local_3,
+];
 const barracas = [
     venda_de_carne,
     comes_e_bebes,
@@ -56,14 +73,13 @@ export default function Map({ day }) {
             center={[32.676623, -16.900641]}
             maxBoundsViscosity={1.0}
             maxBounds={[
-                [32.67, -16.9135],
-                [32.6905, -16.885],
+                [32.66, -16.92], // Moved southwest (lower-left) corner down and left
+                [32.6905, -16.885], // Kept northeast (upper-right) corner the same
             ]}
         >
             <TileLayer
                 attribution='Mapa: <a href="https://www.arcgis.com/index.html">ArcGIS</a>'
                 url='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
-                //DEBUGGING:
                 eventHandlers={{
                     tileerror: (e) => {
                         console.log('Tile load error:', e);
@@ -72,9 +88,13 @@ export default function Map({ day }) {
                 }}
             />
 
+            <Pane name='upper' pane='upper' style={{ zIndex: 500 }} />
+            <Pane name='lower' pane='lower' style={{ zIndex: 499 }} />
+
             {barracas.map((poly, i) => {
                 return <RenderPolygons key={i} poly={poly} type='poly' />;
             })}
+
             <Transito day={day} />
 
             {!isMobile && <Legend day={day} />}
@@ -109,7 +129,7 @@ function RenderPolygons({ poly, type }) {
         ) : (
             <Polygon key={index} positions={positions} pathOptions={styles}>
                 <Tooltip direction='top' sticky>
-                    {feature.properties?.NOME}
+                    {feature.info?.nome}
                 </Tooltip>
             </Polygon>
         );
@@ -217,77 +237,13 @@ export function Legend({ day }) {
     // definir dados da legenda baseados no dia
     switch (day) {
         case 1:
-            data = [
-                {
-                    legend: 'circulação rodoviária condicionada ao acesso local',
-                    tw: 'bg-[#9370DB] w-6 h-1.5',
-                    css: null,
-                },
-                {
-                    legend: 'circulação rodoviária condiconada a sentido único',
-                    tw: 'bg-[yellow] w-6 h-1.5 relative',
-                    css: {
-                        borderTop: '6px solid transparent',
-                        borderBottom: '6px solid transparent',
-                        borderLeft: '8px solid #E6B800',
-                        marginLeft: '8px',
-                        position: 'absolute',
-                        top: -2.6,
-                    },
-                },
-            ];
+            data = day_1;
             break;
         case 2:
-            data = [
-                {
-                    legend: 'circulação rodoviária interrompida, exceto taxis e moradores',
-                    tw: 'bg-[#9370DB] w-6 h-1.5',
-                    css: null,
-                },
-                {
-                    legend: 'circulação rodoviária interrompida',
-                    tw: 'w-6 h-1.5 bg-[#FF0000]',
-                    css: null,
-                },
-                {
-                    legend: 'circulação rodoviária condiconada a sentido único',
-                    tw: 'bg-[yellow] w-6 h-1.5 relative',
-                    css: {
-                        borderTop: '6px solid transparent',
-                        borderBottom: '6px solid transparent',
-                        borderLeft: '8px solid #E6B800',
-                        marginLeft: '8px',
-                        position: 'absolute',
-                        top: -2.6,
-                    },
-                },
-            ];
+            data = day_2;
             break;
         case 3:
-            data = [
-                {
-                    legend: 'circulação rodoviária condicionada ao acesso local',
-                    tw: 'bg-[#9370DB] w-6 h-1.5',
-                    css: null,
-                },
-                {
-                    legend: 'circulação rodoviária interrompida',
-                    tw: 'w-6 h-1.5 bg-[#FF0000]',
-                    css: null,
-                },
-                {
-                    legend: 'circulação rodoviária condiconada a sentido único',
-                    tw: 'bg-[yellow] w-6 h-1.5 relative',
-                    css: {
-                        borderTop: '6px solid transparent',
-                        borderBottom: '6px solid transparent',
-                        borderLeft: '8px solid #E6B800',
-                        marginLeft: '8px',
-                        position: 'absolute',
-                        top: -2.6,
-                    },
-                },
-            ];
+            data = day_3;
             break;
         default:
             null;
@@ -299,30 +255,47 @@ export function Legend({ day }) {
     return (
         <div
             className={
-                isMobile ? ' flex w-full ' : 'leaflet-right leaflet-bottom p-4'
+                isMobile
+                    ? ' flex w-full '
+                    : 'leaflet-right w-fit leaflet-bottom p-4'
             }
         >
             <div className='bg-base-100 bg-opacity-90 shadow-md p-3 rounded-lg w-[100%] leaflet-control'>
                 <h4 className='mb-2 font-bold'>Legenda</h4>
-                <div className='space-y-2'>
-                    {data.map((day, index) => {
-                        return (
-                            <div
-                                key={index}
-                                className='flex items-center gap-2'
-                            >
-                                <div className={day.tw}>
-                                    {day.css && (
-                                        <div
-                                            className='w-0 h-0'
-                                            style={day.css}
-                                        />
-                                    )}
+                <div>
+                    <div>
+                        {data.map((day, index) => {
+                            return (
+                                <div
+                                    key={index}
+                                    className='flex items-center gap-2'
+                                >
+                                    <div className={day.tw}>
+                                        {day.css && (
+                                            <div
+                                                className='w-0 h-0'
+                                                style={day.css}
+                                            />
+                                        )}
+                                    </div>
+                                    <span>{day.legend}</span>
                                 </div>
-                                <span>{day.legend}</span>
-                            </div>
-                        );
-                    })}
+                            );
+                        })}
+                    </div>
+                    <div>
+                        {legenda.map((item, index) => {
+                            return (
+                                <div
+                                    key={index}
+                                    className='flex items-center gap-2'
+                                >
+                                    <div className={item.tw}></div>
+                                    <span>{item.legend}</span>
+                                </div>
+                            );
+                        })}
+                    </div>
                 </div>
             </div>
         </div>

@@ -82,52 +82,160 @@ export const contacts = [
                 description: 'Polícia, Bombeiros, Médicos',
             },
             {
-                name: 'Segurança do Evento',
-                phone: '(555) 123-4567',
-                description: 'Segurança do festival 24/7',
+                name: 'Proteção civil',
+                phone: '291 700 112',
+                description: 'Serviço Regional de Proteção Civil',
             },
-            {
-                name: 'Tenda Médica',
-                phone: '(555) 123-4568',
-                description: 'Primeiros socorros e assistência médica',
-            },
+            //         {
+            //             name: 'Tenda Médica',
+            //             phone: '(555) 123-4568',
+            //             description: 'Primeiros socorros e assistência médica',
+            //         },
         ],
-    },
-    {
-        category: 'Apoio ao Evento',
-        icon: HelpCircle,
-        color: 'text-blue-600 bg-blue-100',
-        contacts: [
-            {
-                name: 'Information Desk',
-                phone: '(555) 123-4569',
-                description: 'Informações gerais do evento',
-            },
-            {
-                name: 'Lost & Found',
-                phone: '(555) 123-4570',
-                description: 'Reportar itens perdidos e encontrados',
-            },
-            {
-                name: 'Guest Services',
-                phone: '(555) 123-4571',
-                description: 'Assistência e reclamações',
-            },
-        ],
+        // },
+        // {
+        //     category: 'Apoio ao Evento',
+        //     icon: HelpCircle,
+        //     color: 'text-blue-600 bg-blue-100',
+        //     contacts: [
+        //         {
+        //             name: 'Information Desk',
+        //             phone: '(555) 123-4569',
+        //             description: 'Informações gerais do evento',
+        //         },
+        //         {
+        //             name: 'Lost & Found',
+        //             phone: '(555) 123-4570',
+        //             description: 'Reportar itens perdidos e encontrados',
+        //         },
+        //         {
+        //             name: 'Guest Services',
+        //             phone: '(555) 123-4571',
+        //             description: 'Assistência e reclamações',
+        //         },
+        //     ],
     },
 ];
 
 export const fileList = [
     {
-        name: 'Horários do funchal (Campanha viagens)',
+        name: 'Horários do teleférico (Campanha viagens)',
         file: 'horarios.png',
     },
     {
-        name: 'Arraial do Monte 2025',
+        name: 'Festas do Monte 2025',
         file: 'arraial.png',
     },
     {
         name: 'Condicionamento das estradas',
         file: 'estradas.pdf',
+    },
+];
+
+export const legenda = [
+    {
+        legend: 'Meio motorizado',
+        tw: 'bg-[#fc4006] w-4 h-3 mr-2 relative',
+    },
+    {
+        legend: 'Pequenos balcões',
+        tw: 'bg-[#9fff7e] w-4 h-3 mr-2 relative',
+    },
+    {
+        legend: 'Venda de velas',
+        tw: 'bg-[#7edfff] w-4 h-3 mr-2 relative',
+    },
+    {
+        legend: 'Venda de carne',
+        tw: 'bg-[#fce910] w-4 h-3 mr-2 relative',
+    },
+    {
+        legend: 'Comes e bebes',
+        tw: 'bg-[#dd11dd] w-4 h-3 mr-2 relative',
+    },
+];
+
+export const day_1 = [
+    {
+        legend: 'Circulação habitual',
+        tw: 'bg-[#808080] w-6 h-1.5',
+        css: null,
+    },
+    {
+        legend: 'Circulação condicionada ao acesso local',
+        tw: 'bg-[#9370DB] w-6 h-1.5',
+        css: null,
+    },
+    {
+        legend: 'Circulação condiconada a sentido único',
+        tw: 'bg-[yellow] w-6 h-1.5 relative',
+        css: {
+            borderTop: '6px solid transparent',
+            borderBottom: '6px solid transparent',
+            borderLeft: '8px solid #E6B800',
+            marginLeft: '8px',
+            position: 'absolute',
+            top: -2.6,
+        },
+    },
+];
+
+export const day_2 = [
+    {
+        legend: 'Circulação habitual',
+        tw: 'bg-[#808080] w-6 h-1.5',
+        css: null,
+    },
+    {
+        legend: 'Circulação interrompida, exceto taxis e moradores',
+        tw: 'bg-[#9370DB] w-6 h-1.5',
+        css: null,
+    },
+    {
+        legend: 'Circulação interrompida',
+        tw: 'w-6 h-1.5 bg-[#FF0000]',
+        css: null,
+    },
+    {
+        legend: 'Circulação condiconada a sentido único',
+        tw: 'bg-[yellow] w-6 h-1.5 relative',
+        css: {
+            borderTop: '6px solid transparent',
+            borderBottom: '6px solid transparent',
+            borderLeft: '8px solid #E6B800',
+            marginLeft: '8px',
+            position: 'absolute',
+            top: -2.6,
+        },
+    },
+];
+
+export const day_3 = [
+    {
+        legend: 'Circulação habitual',
+        tw: 'bg-[#808080] w-6 h-1.5',
+        css: null,
+    },
+    {
+        legend: 'Circulação condicionada ao acesso local',
+        tw: 'bg-[#9370DB] w-6 h-1.5',
+        css: null,
+    },
+    {
+        legend: 'Circulação interrompida',
+        tw: 'w-6 h-1.5 bg-[#FF0000]',
+        css: null,
+    },
+    {
+        legend: 'Circulação condiconada a sentido único',
+        tw: 'bg-[yellow] w-6 h-1.5 relative',
+        css: {
+            borderTop: '6px solid transparent',
+            borderBottom: '6px solid transparent',
+            borderLeft: '8px solid #E6B800',
+            marginLeft: '8px',
+            position: 'absolute',
+            top: -2.6,
+        },
     },
 ];

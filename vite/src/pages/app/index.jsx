@@ -16,7 +16,7 @@ export default function App() {
                 {/* Header */}
                 <div className='mb-8 text-center'>
                     <h1 className='mb-2 font-bold text-3xl'>
-                        Arraial do Monte 2025
+                        Festas do Monte 2025
                     </h1>
                     <p className=''>
                         Encontre toda a informação sobre o evento num só lugar!
@@ -44,9 +44,10 @@ export default function App() {
                                 </div>
                             </div>
                             <p className='text-sm text-base-content'>
-                                Navegue pelo terreno do arraial, saiba a
+                                Navegue pelo terreno das festas, saiba a
                                 localização das procissões, comida, vendedores e
-                                verifique as informações sobre interdições.
+                                verifique as informações sobre alterações a
+                                circulação rodoviária.
                             </p>
                         </div>
                     </NavLink>
