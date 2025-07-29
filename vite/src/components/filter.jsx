@@ -19,11 +19,19 @@ const barracasValues = [
         name: 'Meio motorizado',
         slug: 'meio_motorizado',
     },
+    {
+        name: 'Meios proteção civil',
+        slug: 'pc_meios',
+    },
+    {
+        name: 'Ponto socorro',
+        slug: 'pc_psocorros',
+    },
 ];
 
 export function Filter({ day, setDay, barracas, setBarracas }) {
     return (
-        <div className='my-2 p-2 w-full'>
+        <div className='flex flex-col my-2 p-2 max-w-4xl'>
             <h1 className='mb-2 pb-2 font-bold text-xl'>Filtros</h1>
             <div>
                 <fieldset className='bg-base-100 p-4 border border-base-300 rounded-box w-full'>
@@ -66,9 +74,9 @@ export function Filter({ day, setDay, barracas, setBarracas }) {
 
                 <fieldset className='bg-base-100 p-4 border border-base-300 rounded-box'>
                     <legend className='fieldset-legend'>Barracas</legend>
-                    <div className='flex md:flex-row flex-col gap-5 my-2 md:w-full'>
+                    <div className='gap-5 columns-2 my-2 max-w-4xl'>
                         {barracasValues.map((barraca) => (
-                            <label className='label' key={barraca.slug}>
+                            <label className='mx-4 label' key={barraca.slug}>
                                 <input
                                     type='checkbox'
                                     className='checkbox'

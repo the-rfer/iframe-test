@@ -153,6 +153,14 @@ export const legenda = [
         legend: 'Comes e bebes',
         tw: 'bg-[#dd11dd] w-4 h-3 mr-2 relative',
     },
+    {
+        legend: 'Meios proteção civil',
+        tw: 'bg-[#D1495B] w-4 h-4 mr-2 relative rounded-full',
+    },
+    {
+        legend: 'Primeiros socorros',
+        tw: 'bg-[#E63946] w-4 h-4 mr-2 relative rounded-full',
+    },
 ];
 
 export const day_1 = [

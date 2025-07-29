@@ -14,6 +14,8 @@ export default function Maps() {
         venda_de_velas: true,
         pequenos_balcoes: true,
         meio_motorizado: true,
+        pc_meios: true,
+        pc_psocorros: true,
     });
 
     const isMobile = useIsMobile();
@@ -46,31 +48,31 @@ export default function Maps() {
     );
 }
 
-function TESTComponent({ day, setDay }) {
-    return (
-        <div className='justify-between gap-2 grid grid-cols-3 mt-2 w-full'>
-            <h1 className='col-span-3 font-bold text-lg text-center'>
-                <span className='text-red-500'>TEST: </span> Info trânsito - Dia{' '}
-                {day}.
-            </h1>
-            <button
-                className={`btn btn-primary ${day === 1 && 'btn-active'}`}
-                onClick={() => setDay(1)}
-            >
-                Dia 1
-            </button>
-            <button
-                className={`btn btn-primary ${day === 2 && 'btn-active'}`}
-                onClick={() => setDay(2)}
-            >
-                Dia 2
-            </button>
-            <button
-                className={`btn btn-primary ${day === 3 && 'btn-active'}`}
-                onClick={() => setDay(3)}
-            >
-                Dia 3
-            </button>
-        </div>
-    );
-}
+// function TESTComponent({ day, setDay }) {
+//     return (
+//         <div className='justify-between gap-2 grid grid-cols-3 mt-2 w-full'>
+//             <h1 className='col-span-3 font-bold text-lg text-center'>
+//                 <span className='text-red-500'>TEST: </span> Info trânsito - Dia{' '}
+//                 {day}.
+//             </h1>
+//             <button
+//                 className={`btn btn-primary ${day === 1 && 'btn-active'}`}
+//                 onClick={() => setDay(1)}
+//             >
+//                 Dia 1
+//             </button>
+//             <button
+//                 className={`btn btn-primary ${day === 2 && 'btn-active'}`}
+//                 onClick={() => setDay(2)}
+//             >
+//                 Dia 2
+//             </button>
+//             <button
+//                 className={`btn btn-primary ${day === 3 && 'btn-active'}`}
+//                 onClick={() => setDay(3)}
+//             >
+//                 Dia 3
+//             </button>
+//         </div>
+//     );
+// }

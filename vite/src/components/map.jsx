@@ -13,6 +13,7 @@ import {
     Tooltip,
     useMap,
     Pane,
+    CircleMarker,
 } from 'react-leaflet';
 import {
     venda_de_carne,
@@ -38,6 +39,7 @@ import {
     acesso_local_3,
     circulacao_habitual_3,
 } from '@/data/transito/17';
+import { pc_meios, pc_psocorros } from '@/data/points';
 
 const day1 = [circulacao_habitual_1, acesso_local_1, sentido_unico_1];
 const day2 = [
@@ -53,11 +55,13 @@ const day3 = [
     acesso_local_3,
 ];
 const barracas = [
-    { slug: 'venda_de_carne', poly: venda_de_carne },
-    { slug: 'comes_e_bebes', poly: comes_e_bebes },
-    { slug: 'venda_de_velas', poly: venda_de_velas },
-    { slug: 'meio_motorizado', poly: meio_motorizado },
-    { slug: 'pequenos_balcoes', poly: pequenos_balcoes },
+    { slug: 'venda_de_carne', poly: venda_de_carne, type: 'poly' },
+    { slug: 'comes_e_bebes', poly: comes_e_bebes, type: 'poly' },
+    { slug: 'venda_de_velas', poly: venda_de_velas, type: 'poly' },
+    { slug: 'meio_motorizado', poly: meio_motorizado, type: 'poly' },
+    { slug: 'pequenos_balcoes', poly: pequenos_balcoes, type: 'poly' },
+    { slug: 'pc_meios', poly: pc_meios, type: 'point' },
+    { slug: 'pc_psocorros', poly: pc_psocorros, type: 'point' },
 ];
 
 export default function Map({ day, barracaState }) {
@@ -93,8 +97,8 @@ export default function Map({ day, barracaState }) {
 
             {barracas
                 .filter(({ slug }) => barracaState[slug])
-                .map(({ poly, slug }) => (
-                    <RenderPolygons key={slug} poly={poly} type='poly' />
+                .map(({ poly, slug, type }) => (
+                    <RenderPolygons key={slug} poly={poly} type={type} />
                 ))}
 
             <Transito day={day} />
@@ -128,12 +132,23 @@ function RenderPolygons({ poly, type }) {
                     />
                 )}
             </div>
-        ) : (
+        ) : type === 'poly' ? (
             <Polygon key={index} positions={positions} pathOptions={styles}>
                 <Tooltip direction='top' sticky>
                     {feature.info?.nome}
                 </Tooltip>
             </Polygon>
+        ) : (
+            <CircleMarker
+                key={index}
+                radius={6}
+                center={positions}
+                pathOptions={styles}
+            >
+                <Tooltip direction='top' sticky>
+                    {feature.info?.nome}
+                </Tooltip>
+            </CircleMarker>
         );
     });
 }
@@ -258,11 +273,11 @@ export function Legend({ day }) {
         <div
             className={
                 isMobile
-                    ? ' flex w-full '
-                    : 'leaflet-right w-fit leaflet-bottom p-4'
+                    ? ' flex w-full shadow-sm'
+                    : 'leaflet-right w-fit shadow-md leaflet-bottom p-4'
             }
         >
-            <div className='bg-base-100 bg-opacity-90 shadow-md p-3 rounded-lg w-[100%] leaflet-control'>
+            <div className='bg-base-100 bg-opacity-90 p-3 rounded-lg w-[100%] leaflet-control'>
                 <h4 className='mb-2 font-bold'>Legenda</h4>
                 <div>
                     <div className='mb-2 pb-2 border-gray-200/50 border-b'>
