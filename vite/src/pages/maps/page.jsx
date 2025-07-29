@@ -34,7 +34,7 @@ export default function Maps() {
 
             {isMobile && (
                 <div className='flex mt-2 min-w-full'>
-                    <Legend day={day} />
+                    <Legend day={day} barracaState={barracas} />
                 </div>
             )}
 

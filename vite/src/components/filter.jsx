@@ -74,7 +74,7 @@ export function Filter({ day, setDay, barracas, setBarracas }) {
 
                 <fieldset className='bg-base-100 p-4 border border-base-300 rounded-box'>
                     <legend className='fieldset-legend'>Barracas</legend>
-                    <div className='gap-5 columns-2 my-2 max-w-4xl'>
+                    <div className='gap-5 columns-1 md:columns-2 my-2 max-w-4xl'>
                         {barracasValues.map((barraca) => (
                             <label className='mx-4 label' key={barraca.slug}>
                                 <input

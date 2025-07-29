@@ -135,30 +135,37 @@ export const fileList = [
 export const legenda = [
     {
         legend: 'Meio motorizado',
+        slug: 'meio_motorizado',
         tw: 'bg-[#fc4006] w-4 h-3 mr-2 relative',
     },
     {
         legend: 'Pequenos balcões',
+        slug: 'pequenos_balcoes',
         tw: 'bg-[#9fff7e] w-4 h-3 mr-2 relative',
     },
     {
         legend: 'Venda de velas',
+        slug: 'venda_de_velas',
         tw: 'bg-[#7edfff] w-4 h-3 mr-2 relative',
     },
     {
         legend: 'Venda de carne',
+        slug: 'venda_de_carne',
         tw: 'bg-[#fce910] w-4 h-3 mr-2 relative',
     },
     {
         legend: 'Comes e bebes',
+        slug: 'comes_e_bebes',
         tw: 'bg-[#dd11dd] w-4 h-3 mr-2 relative',
     },
     {
         legend: 'Meios proteção civil',
+        slug: 'pc_meios',
         tw: 'bg-[#D1495B] w-4 h-4 mr-2 relative rounded-full',
     },
     {
         legend: 'Primeiros socorros',
+        slug: 'pc_psocorros',
         tw: 'bg-[#E63946] w-4 h-4 mr-2 relative rounded-full',
     },
 ];

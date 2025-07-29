@@ -103,7 +103,7 @@ export default function Map({ day, barracaState }) {
 
             <Transito day={day} />
 
-            {!isMobile && <Legend day={day} />}
+            {!isMobile && <Legend day={day} barracaState={barracaState} />}
             <ScaleControl position='bottomleft' imperial={false} />
         </MapContainer>
     );
@@ -246,7 +246,7 @@ function ArrowDecorator({ positions, color }) {
     return null;
 }
 
-export function Legend({ day }) {
+export function Legend({ day, barracaState }) {
     const isMobile = useIsMobile();
 
     let data;
@@ -301,17 +301,19 @@ export function Legend({ day }) {
                         })}
                     </div>
                     <div>
-                        {legenda.map((item, index) => {
-                            return (
-                                <div
-                                    key={index}
-                                    className='flex items-center gap-2'
-                                >
-                                    <div className={item.tw}></div>
-                                    <span>{item.legend}</span>
-                                </div>
-                            );
-                        })}
+                        {legenda
+                            .filter(({ slug }) => barracaState[slug])
+                            .map((item, index) => {
+                                return (
+                                    <div
+                                        key={index}
+                                        className='flex items-center gap-2'
+                                    >
+                                        <div className={item.tw}></div>
+                                        <span>{item.legend}</span>
+                                    </div>
+                                );
+                            })}
                     </div>
                 </div>
             </div>

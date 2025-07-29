@@ -16,15 +16,15 @@ export default function Index() {
 
             <main
                 className='z-20 relative space-y-8 bg-white/20 hover:bg-white/30 shadow-2xl hover:shadow-2xl backdrop-blur-lg backdrop-saturate-150 p-10 md:p-14 border border-white/30 rounded-3xl ring-1 ring-white/20 w-full max-w-3xl text-gray-100 text-center transition-all duration-500'
-                aria-label='Informações sobre o Arraial do Monte'
+                aria-label='Informações sobre o festas do Monte'
             >
                 <header className='space-y-2'>
                     <h1 className='drop-shadow-lg font-extrabold text-green-200 text-5xl md:text-6xl leading-tight'>
-                        Arraial do Monte
+                        Festas do Monte
                     </h1>
                     <p className='text-gray-100/80 text-base md:text-lg tracking-wide'>
-                        Descubra tudo sobre o Arraial do Monte 2025:
-                        informações, novidades e detalhes do evento.
+                        Descubra tudo sobre o festas do Monte 2025: informações,
+                        novidades e detalhes do evento.
                     </p>
                 </header>
 
