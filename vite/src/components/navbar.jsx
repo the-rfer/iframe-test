@@ -20,7 +20,7 @@ export function DesktopNav() {
     return (
         <div className='bg-base-200 shadow-sm m-2 mx-auto rounded-lg max-w-full lg:max-w-[80%] navbar'>
             <div className='flex flex-row flex-1 items-center gap-2'>
-                <NavLink to='/app' className='flex items-center gap-2'>
+                <NavLink to='/app' className='flex items-center gap-2 ml-2'>
                     <div className='pr-2 border-gray-300/50 border-r w-[120px] h-10'>
                         <img
                             src={logo}
