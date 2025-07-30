@@ -1,4 +1,4 @@
-import { HelpCircle, Shield } from 'lucide-react';
+import { Shield } from 'lucide-react';
 
 export const schedule = [
     {
@@ -138,7 +138,7 @@ export const fileList = [
 
 export const legenda = [
     {
-        legend: 'Pipocas e algodão doce',
+        legend: 'Pipocas e Algodão Doce',
         slug: 'meio_motorizado',
         tw: 'bg-[#fc4006] w-4 h-3 mr-2 relative',
     },

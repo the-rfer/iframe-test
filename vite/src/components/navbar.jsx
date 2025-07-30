@@ -1,11 +1,10 @@
 import { NavLink, useLocation } from 'react-router';
 import { Home, MapPin, Phone, Info, Camera } from 'lucide-react';
 import { ModeToggle } from '@/components/theme-toggle';
+import { useTheme } from '@/hooks/useTheme';
 import logo from '@/assets/logo.png';
 import logoDark from '@/assets/logo-dark.png';
 import icon from '@/assets/icon.png';
-// import logob from '@/assets/text-black.png';
-// import logow from '@/assets/text-white.png';
 
 const navItems = [
     { href: '/app', icon: Home, label: 'Home' },
@@ -17,7 +16,7 @@ const navItems = [
 
 export function DesktopNav() {
     const { pathname } = useLocation();
-    const theme = document.documentElement.getAttribute('data-theme');
+    const { theme } = useTheme();
 
     return (
         <div className='bg-base-200 shadow-sm m-2 mx-auto rounded-lg max-w-full lg:max-w-[80%] navbar'>

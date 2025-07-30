@@ -1,24 +1,13 @@
 import { Moon, Sun } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { useTheme } from '@/hooks/useTheme';
 
 export function ModeToggle() {
-    const [theme, setTheme] = useState(
-        () =>
-            localStorage.getItem('theme') ||
-            (window.matchMedia('(prefers-color-scheme: dark)').matches
-                ? 'dark'
-                : 'light')
-    );
-
-    useEffect(() => {
-        document.documentElement.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
-    }, [theme]);
+    const { theme, toggleTheme } = useTheme();
 
     return (
         <button
             className='btn-ghost btn-circle btn'
-            onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+            onClick={toggleTheme}
             aria-label='Toggle theme'
         >
             {theme === 'light' ? (

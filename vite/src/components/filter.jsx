@@ -16,7 +16,7 @@ const barracasValues = [
         slug: 'pequenos_balcoes',
     },
     {
-        name: 'Pipocas e algodão doce',
+        name: 'Pipocas e Algodão Doce',
         slug: 'meio_motorizado',
     },
 ];
