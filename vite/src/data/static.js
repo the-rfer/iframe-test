@@ -134,7 +134,7 @@ export const fileList = [
 
 export const legenda = [
     {
-        legend: 'Meio motorizado',
+        legend: 'Pipocas e algodão doce',
         slug: 'meio_motorizado',
         tw: 'bg-[#fc4006] w-4 h-3 mr-2 relative',
     },

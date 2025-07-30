@@ -844,7 +844,7 @@ export const meio_motorizado = {
                 RefName: null,
             },
             info: {
-                nome: 'Meio motorizado',
+                nome: 'Pipocas e algodão doce',
             },
             styles: {
                 color: '#fc4006',
@@ -877,7 +877,7 @@ export const meio_motorizado = {
                 RefName: null,
             },
             info: {
-                nome: 'Meio motorizado',
+                nome: 'Pipocas e algodão doce',
             },
             styles: {
                 color: '#fc4006',
