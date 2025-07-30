@@ -19,6 +19,9 @@ const barracasValues = [
         name: 'Meio motorizado',
         slug: 'meio_motorizado',
     },
+];
+
+const pcivil = [
     {
         name: 'Meios proteção civil',
         slug: 'pc_meios',
@@ -87,6 +90,28 @@ export function Filter({ day, setDay, barracas, setBarracas }) {
                     <legend className='fieldset-legend'>Barracas</legend>
                     <div className='gap-5 columns-1 md:columns-2 my-2 max-w-4xl'>
                         {barracasValues.map((barraca) => (
+                            <label className='mx-4 label' key={barraca.slug}>
+                                <input
+                                    type='checkbox'
+                                    className='checkbox'
+                                    checked={barracas[barraca.slug]}
+                                    onChange={() =>
+                                        setBarracas((prev) => ({
+                                            ...prev,
+                                            [barraca.slug]: !prev[barraca.slug],
+                                        }))
+                                    }
+                                />
+                                <span className='ml-2'>{barraca.name}</span>
+                            </label>
+                        ))}
+                    </div>
+                </fieldset>
+
+                <fieldset className='bg-base-100 p-4 border border-base-300 rounded-box'>
+                    <legend className='fieldset-legend'>Proteção Civil</legend>
+                    <div className='gap-5 columns-1 md:columns-2 my-2 max-w-4xl'>
+                        {pcivil.map((barraca) => (
                             <label className='mx-4 label' key={barraca.slug}>
                                 <input
                                     type='checkbox'
