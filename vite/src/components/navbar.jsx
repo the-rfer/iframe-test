@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from 'react-router';
-import { Home, MapPin, Phone, Info } from 'lucide-react';
+import { Home, MapPin, Phone, Info, Camera } from 'lucide-react';
 import { ModeToggle } from '@/components/theme-toggle';
 import logo from '@/assets/brasao.png';
 import icon from '@/assets/icon.png';
@@ -11,6 +11,7 @@ const navItems = [
     { href: '/app/map', icon: MapPin, label: 'Mapas' },
     { href: '/app/contact', icon: Phone, label: 'Contactos' },
     { href: '/app/info', icon: Info, label: 'Informação' },
+    { href: '/app/midia', icon: Camera, label: 'Imagens' },
 ];
 
 export function DesktopNav() {
@@ -19,41 +20,44 @@ export function DesktopNav() {
     return (
         <div className='bg-base-200 shadow-sm m-2 mx-auto rounded-lg max-w-full lg:max-w-[80%] navbar'>
             <div className='flex flex-row flex-1 items-center gap-2'>
-                <div className='avatar'>
-                    <div className='mr-2 w-12 h-12'>
-                        <img
-                            src={logo}
-                            alt='icon igreja do monte'
-                            className='object-cover' //
-                        />
-                    </div>
-                    <div className='w-12 h-12'>
-                        <img
-                            src={icon}
-                            alt='icon igreja do monte'
-                            className='object-cover' //
-                        />
-                    </div>
-                    {/* NOTE: utilização do logo completo da paróquia fica uma caquinha */}
-                    {/* <div className='w-40 h-12'>
+                <NavLink to='/app' className='flex items-center gap-2'>
+                    <div className='avatar'>
+                        <div className='mr-2 w-12 h-12'>
+                            <img
+                                src={logo}
+                                alt='icon igreja do monte'
+                                className='object-cover' //
+                            />
+                        </div>
+                        <div className='w-12 h-12'>
+                            <img
+                                src={icon}
+                                alt='icon igreja do monte'
+                                className='object-cover' //
+                            />
+                        </div>
+                        {/* NOTE: utilização do logo completo da paróquia fica uma caquinha */}
+                        {/* <div className='w-40 h-12'>
                         <img
                             src={logob}
                             alt='icon igreja do monte'
                             className='object-cover' //
                         />
                     </div> */}
-                </div>
-                <p className='font-bold'>Festa do Monte 2025</p>
+                    </div>
+                    <p className='font-semibold'>Festa do Monte 2025</p>
+                </NavLink>
             </div>
 
-            <div className='flex flex-row flex-none items-center gap-4'>
-                {navItems.map((item) => {
+            <div className='flex flex-row flex-none items-center gap-2'>
+                {navItems.map((item, index) => {
                     const isActive = pathname === item.href;
+                    if (index === 0) return;
                     return (
                         <NavLink
                             key={item.href}
                             to={item.href}
-                            className={`flex flex-row items-center gap-2 px-3 py-2 transition-colors ${
+                            className={`flex flex-row items-center gap-1 px-3 py-2 transition-colors ${
                                 isActive
                                     ? 'text-primary'
                                     : 'text-base-content/70 hover:text-base-content'

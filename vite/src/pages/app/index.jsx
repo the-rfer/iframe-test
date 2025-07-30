@@ -46,7 +46,10 @@ export default function App() {
                         popular em honra de Nossa Senhora do Monte, padroeira do
                         Funchal. Reconhecida pela sua dimensão espiritual e pela
                         energia contagiante, atrai anualmente milhares de fiéis,
-                        visitantes e emigrantes.
+                        visitantes e emigrantes. <br />
+                        Dos percursos religiosos aos corredores de flores e
+                        sabores típicos, o Monte transforma-se num dos pontos
+                        mais especiais da ilha nesta altura do ano.
                     </p>
                     <div className='space-y-2 my-6 text-sm'>
                         <div className='flex justify-between'>
@@ -70,11 +73,6 @@ export default function App() {
                             </span>
                         </div>
                     </div>
-                    <p className='text-sm text-base-content text-justify'>
-                        Dos percursos religiosos aos corredores de flores e
-                        sabores típicos, o Monte transforma-se num dos pontos
-                        mais especiais da ilha nesta altura do ano.
-                    </p>
                 </div>
 
                 {/* Feature Cards */}

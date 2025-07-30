@@ -3,8 +3,9 @@ import Index from '@/pages/index/page.jsx';
 import App from '@/pages/app/page.jsx';
 import Contacts from '@/pages/contact/page';
 import Information from '@/pages/info/page';
-import Maps from '@/pages/maps/page.jsx';
-import Page from '@/pages/app/index.jsx';
+import Maps from '@/pages/maps/page';
+import Page from '@/pages/app/index';
+import Media from '@/pages/media/page';
 
 const router = createBrowserRouter([
     {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
             {
                 path: 'contact',
                 element: <Contacts />,
+            },
+            {
+                path: 'midia',
+                element: <Media />,
             },
         ],
     },
