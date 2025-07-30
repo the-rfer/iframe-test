@@ -38,7 +38,9 @@ export function Filter({ day, setDay, barracas, setBarracas }) {
             <h1 className='mb-2 pb-2 font-bold text-xl'>Filtros</h1>
             <div>
                 <fieldset className='bg-base-100 p-4 border border-base-300 rounded-box w-full'>
-                    <legend className='fieldset-legend'>Trânsito</legend>
+                    <legend className='fieldset-legend'>
+                        Divisão de Mobilidade e Trânsito - Informação Trânsito
+                    </legend>
                     <div className='flex md:flex-row flex-col gap-5 my-2 w-full'>
                         <label className='label'>
                             <input
@@ -87,7 +89,10 @@ export function Filter({ day, setDay, barracas, setBarracas }) {
                 </fieldset>
 
                 <fieldset className='bg-base-100 p-4 border border-base-300 rounded-box'>
-                    <legend className='fieldset-legend'>Barracas</legend>
+                    <legend className='fieldset-legend'>
+                        Divisão de Gestão de Espaços Públicos e Publicidade -
+                        Barracas
+                    </legend>
                     <div className='gap-5 columns-1 md:columns-2 my-2 max-w-4xl'>
                         {barracasValues.map((barraca) => (
                             <label className='mx-4 label' key={barraca.slug}>
@@ -109,7 +114,9 @@ export function Filter({ day, setDay, barracas, setBarracas }) {
                 </fieldset>
 
                 <fieldset className='bg-base-100 p-4 border border-base-300 rounded-box'>
-                    <legend className='fieldset-legend'>Proteção Civil</legend>
+                    <legend className='fieldset-legend'>
+                        Serviço Municipal de Proteção Civil - Meios
+                    </legend>
                     <div className='gap-5 columns-1 md:columns-2 my-2 max-w-4xl'>
                         {pcivil.map((barraca) => (
                             <label className='mx-4 label' key={barraca.slug}>
