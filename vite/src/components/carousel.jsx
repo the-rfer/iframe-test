@@ -22,14 +22,30 @@ export function Carousel() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [selectedImage, setSelectedImage] = useState(null);
 
-    const scrollToIndex = (index) => {
+    const swipeHandlers = useSwipeable({
+        onSwipedLeft: () => scrollToIndex((currentIndex + 1) % images.length),
+        onSwipedRight: () =>
+            scrollToIndex((currentIndex - 1 + images.length) % images.length),
+        preventScrollOnSwipe: true,
+        trackMouse: true,
+    });
+
+    function scrollToIndex(index) {
         const el = carouselRef.current;
         if (!el) return;
         const itemWidth = el.firstChild?.clientWidth || 1;
-        const gap = 16; // matches space-x-4
+        const gap = 16;
         const scrollTo = index * (itemWidth + gap);
         el.scrollTo({ left: scrollTo, behavior: 'smooth' });
-    };
+    }
+
+    function handlePrev() {
+        scrollToIndex((currentIndex - 1 + images.length) % images.length);
+    }
+
+    function handleNext() {
+        scrollToIndex((currentIndex + 1) % images.length);
+    }
 
     useEffect(() => {
         const el = carouselRef.current;
@@ -54,18 +70,6 @@ export function Carousel() {
 
         return () => clearInterval(interval);
     }, [currentIndex]);
-
-    const swipeHandlers = useSwipeable({
-        onSwipedLeft: () => scrollToIndex((currentIndex + 1) % images.length),
-        onSwipedRight: () =>
-            scrollToIndex((currentIndex - 1 + images.length) % images.length),
-        preventScrollOnSwipe: true,
-        trackMouse: true,
-    });
-
-    const handlePrev = () =>
-        scrollToIndex((currentIndex - 1 + images.length) % images.length);
-    const handleNext = () => scrollToIndex((currentIndex + 1) % images.length);
 
     return (
         <div className='mx-auto md:max-w-[1500px] max-w-md grow'>
@@ -161,84 +165,3 @@ export function Carousel() {
         </div>
     );
 }
-
-// return (
-//         <div className='mx-auto w-full max-w-md max-h-96 md:max-h-[1500px] grow'>
-//             {/* botões desktop only */}
-//             <button
-//                 onClick={handlePrev}
-//                 className='hidden top-[40%] left-[25%] z-10 absolute md:flex justify-center items-center bg-base-200 hover:bg-base-300 shadow p-2 rounded-full -translate-y-1/2'
-//             >
-//                 <ChevronLeft className='w-5 h-5' />
-//             </button>
-//             <button
-//                 onClick={handleNext}
-//                 className='hidden top-[40%] right-[25%] z-10 absolute md:flex justify-center items-center bg-base-200 hover:bg-base-300 shadow p-2 rounded-full -translate-y-1/2'
-//             >
-//                 <ChevronRight className='w-5 h-5' />
-//             </button>
-
-//             {/* main imgs */}
-//             <div
-//                 {...swipeHandlers}
-//                 ref={carouselRef}
-//                 className='space-x-4 bg-base p-4 border border-base-300 rounded-box max-w-md h-full overflow-x-auto scroll-smooth grow carousel carousel-center'
-//             >
-//                 {images.map((src, i) => (
-//                     <div className='carousel-item' key={i}>
-//                         <img
-//                             src={src}
-//                             className='rounded-box w-64 md:w-96 h-full object-cover'
-//                             onClick={() => setSelectedImage(src)}
-//                         />
-//                     </div>
-//                 ))}
-//             </div>
-
-//             {/* legenda */}
-//             <div className='mt-2 font-medium text-neutral-content text-sm text-center'>
-//                 {currentIndex + 1} / {images.length}
-//             </div>
-
-//             {/* thumbnails */}
-//             <div className='flex flex-wrap justify-center items-center gap-2 mt-4'>
-//                 {images.map((src, i) => (
-//                     <button
-//                         key={i}
-//                         onClick={() => scrollToIndex(i)}
-//                         className={`border-2 rounded overflow-hidden ${
-//                             currentIndex === i
-//                                 ? 'border-primary'
-//                                 : 'border-transparent opacity-60 hover:opacity-100'
-//                         }`}
-//                     >
-//                         <img
-//                             src={src}
-//                             alt={`Thumbnail ${i + 1}`}
-//                             className='w-16 h-12 object-cover'
-//                         />
-//                     </button>
-//                 ))}
-//             </div>
-
-//             {/* modal */}
-//             {selectedImage && (
-//                 <div
-//                     className='z-50 fixed inset-0 flex justify-center items-center bg-black bg-opacity-80'
-//                     onClick={() => setSelectedImage(null)}
-//                 >
-//                     <img
-//                         src={selectedImage}
-//                         className='shadow-lg rounded max-w-full max-h-full'
-//                         onClick={(e) => e.stopPropagation()} // prevent closing on image click
-//                     />
-//                     <button
-//                         className='top-4 right-4 absolute bg-black bg-opacity-50 hover:bg-opacity-80 p-2 rounded-full w-10 h-10 text-white'
-//                         onClick={() => setSelectedImage(null)}
-//                     >
-//                         ✕
-//                     </button>
-//                 </div>
-//             )}
-//         </div>
-//     );
