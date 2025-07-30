@@ -127,8 +127,12 @@ export const fileList = [
         file: 'arraial.png',
     },
     {
-        name: 'Condicionamento das estradas',
+        name: 'Condicionamento das estradas (mapa)',
         file: 'estradas.pdf',
+    },
+    {
+        name: 'Condicionamento das estradas (edital)',
+        file: 'edital.pdf',
     },
 ];
 

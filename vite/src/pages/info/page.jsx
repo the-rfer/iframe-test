@@ -19,7 +19,8 @@ export default function Information() {
                         <div className='flex items-center'>
                             <Clock className='mr-2 w-4 h-4 text-base' />
                             <span>
-                                14 e 15 de Agosto de 2025 • 12:00 - Madrugada
+                                14 e 15 de Agosto de 2025 • 12:00 ás 4:00 e 8:00
+                                ás 19:00
                             </span>
                         </div>
                         <div className='flex items-center'>

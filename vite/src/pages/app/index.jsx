@@ -64,7 +64,9 @@ export default function App() {
                         </div>
                         <div className='flex justify-between'>
                             <span className=''>Início:</span>
-                            <span className='font-medium'>12:00 h</span>
+                            <span className='font-medium'>
+                                dia 14 - 12:00 h | dia 15 - 8:00 h
+                            </span>
                         </div>
                         <div className='flex justify-between'>
                             <span className=''>Novenas e Missas:</span>
