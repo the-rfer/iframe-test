@@ -2,6 +2,7 @@ import { NavLink, useLocation } from 'react-router';
 import { Home, MapPin, Phone, Info, Camera } from 'lucide-react';
 import { ModeToggle } from '@/components/theme-toggle';
 import logo from '@/assets/logo.png';
+import logoDark from '@/assets/logo-dark.png';
 import icon from '@/assets/icon.png';
 // import logob from '@/assets/text-black.png';
 // import logow from '@/assets/text-white.png';
@@ -16,6 +17,7 @@ const navItems = [
 
 export function DesktopNav() {
     const { pathname } = useLocation();
+    const theme = document.documentElement.getAttribute('data-theme');
 
     return (
         <div className='bg-base-200 shadow-sm m-2 mx-auto rounded-lg max-w-full lg:max-w-[80%] navbar'>
@@ -23,7 +25,7 @@ export function DesktopNav() {
                 <NavLink to='/app' className='flex items-center gap-2 ml-2'>
                     <div className='pr-2 border-gray-300/50 border-r w-[120px] h-10'>
                         <img
-                            src={logo}
+                            src={theme === 'light' ? logo : logoDark}
                             alt='funchal.pt'
                             className='w-full h-full object-bottom'
                         />
