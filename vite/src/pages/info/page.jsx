@@ -1,8 +1,6 @@
-import { Clock, MapPin, Music, ScrollText } from 'lucide-react';
+import { ScrollText } from 'lucide-react';
 import { MobileHeader } from '@/components/mobile-header';
-import { Calendar } from '@/components/calendar';
-import { schedule, fileList } from '@/data/static';
-import { Downloads } from '@/components/downloads';
+import { Shield } from 'lucide-react';
 
 export default function Information() {
     return (
@@ -10,69 +8,18 @@ export default function Information() {
             <MobileHeader title='Informação' />
 
             <div className='space-y-6 mx-auto px-4 py-6 container'>
-                <div className='bg-base-300 shadow-sm p-6 rounded-lg'>
-                    <h2 className='flex items-center mb-4 font-semibold text-xl'>
-                        <Music className='mr-2 w-5 h-5 text-blue-600' />
-                        Festas do Monte 2025
-                    </h2>
-                    <div className='gap-4 grid text-sm'>
-                        <div className='flex items-center'>
-                            <Clock className='mr-2 w-4 h-4 text-base' />
-                            <span>
-                                14 e 15 de Agosto de 2025 • 12:00 ás 4:00 e 8:00
-                                ás 19:00
-                            </span>
-                        </div>
-                        <div className='flex items-center'>
-                            <MapPin className='mr-2 w-4 h-4 text-base' />
-                            <span>Monte, Funchal, Ilha da Madeira</span>
-                        </div>
+                <div className='bg-red-50 mb-6 p-4 border border-red-200 rounded-lg'>
+                    <div className='flex items-center mb-2'>
+                        <Shield className='mr-2 w-5 h-5 text-red-600' />
+                        <h3 className='font-semibold text-red-800'>
+                            Emergência
+                        </h3>
                     </div>
-                    <p className='mt-4 text-justify'>
-                        A Festa do Monte constitui um dos momentos mais
-                        significativos da tradição madeirense, integrando fé,
-                        cultura e celebração popular numa expressão coletiva.
-                        Realizada em honra de Nossa Senhora do Monte, padroeira
-                        da cidade do Funchal, esta celebração destaca-se como
-                        uma das mais relevantes manifestações religiosas e
-                        culturais da Madeira, reconhecida nacional e
-                        internacionalmente, e que atrai anualmente milhares de
-                        fiéis, emigrantes e visitantes.
-                        <br />
-                        <br />
-                        A edição de 2025 inicia-se a 5 de agosto, com a
-                        realização das novenas e missas diárias até ao dia 13,
-                        proporcionando um período de preparação espiritual e
-                        fortalecimento comunitário. Nos dias 14 e 15 de agosto
-                        decorrem os momentos solenes da Festa, incluindo a
-                        tradicional procissão em honra de Nossa Senhora do
-                        Monte, vivenciada com profunda devoção por todos os
-                        participantes.
-                        <br />
-                        <br />
-                        Paralelamente ao carácter religioso, a Festa do Monte
-                        assume também uma dimensão social e cultural, com os
-                        percursos até ao santuário adornados pelos tradicionais
-                        corredores de flores. As áreas de restauração e venda de
-                        produtos regionais — desde a gastronomia típica aos
-                        doces e artesanato local — contribuem para dinamizar
-                        este evento, que se afirma como um dos mais importantes
-                        no calendário anual da ilha. Este equilíbrio entre fé e
-                        convívio popular reforça a importância da Festa do Monte
-                        como um elemento fundamental da identidade e património
-                        madeirense.
+                    <p className='text-red-700 text-sm'>
+                        Para emergências imediatas, contacto{' '}
+                        <strong>112</strong>. Para questões do arraial não
+                        urgentes, use os contatos abaixo.
                     </p>
-                </div>
-
-                <div className='bg-base-300 shadow-sm rounded-lg overflow-hidden'>
-                    <div className='p-4 border-b border-base-100'>
-                        <h2 className='flex items-center font-semibold text-lg'>
-                            <Clock className='mr-2 w-5 h-5 text-green-600' />
-                            Calendário
-                        </h2>
-                    </div>
-
-                    <Calendar schedule={schedule} />
                 </div>
 
                 <div className='bg-base-300 shadow-sm rounded-lg overflow-hidden'>
@@ -91,12 +38,97 @@ export default function Information() {
                             experiência organizada, segura e memorável.{' '}
                         </p>
                     </div>
-                    {/* aqui */}
-                    <Downloads files={fileList} />
+                    <Infos />
                 </div>
             </div>
         </div>
     );
 }
 
-// <a href='/api/download/<filename.ext>' download> Download </a>
+function Infos() {
+    return (
+        <div>
+            <div className='collapse collapse-arrow border border-base-300'>
+                <input type='radio' name='my-accordion-2' defaultChecked />
+                <div className='collapse-title font-semibold'>Teleféricos</div>
+                <div className='collapse-content text-sm'>
+                    <fieldset className='p-4 border border-base-100 rounded-box'>
+                        <legend className='fieldset-legend'>
+                            Jardim Botânico
+                        </legend>
+                        <div className='gap-5 columns-1 md:columns-2 my-2 max-w-4xl'>
+                            <div>
+                                <span className='font-bold'>
+                                    Horário de funcionamento
+                                </span>
+                                <br />
+                                9:00h as 17:00h
+                            </div>
+                            <div>
+                                <span className='font-bold'>
+                                    Último embarque
+                                </span>
+                                <br />
+                                16:50h
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset className='p-4 border border-base-100 rounded-box'>
+                        <legend className='fieldset-legend'>
+                            Madeira cable car
+                        </legend>
+                        <div className='gap-5 columns-1 md:columns-2 my-2 max-w-4xl'>
+                            <div className='break-inside-avoid'>
+                                <span className='font-bold'>
+                                    Horário de funcionamento
+                                </span>
+                                <br />
+                                8:45h as 17:45h
+                            </div>
+                            <div className='break-inside-avoid'>
+                                <p className='mb-2'>
+                                    <p className='font-bold'>
+                                        Horário extraordinário
+                                    </p>
+                                    <span className='mr-1'>
+                                        14 e 15 de Agosto -
+                                    </span>
+                                    18:00h às 1:00h
+                                </p>
+
+                                <p>
+                                    Estacionamento gratuito Estacione o seu
+                                    carro gratuitamente no Parque Almirante
+                                    Reis. Das 18h do dia 14 às 02h do dia 15.
+                                    Mediante a apresentação do bilhete do
+                                    teleférico na caixa central.
+                                </p>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div className='collapse collapse-arrow border border-base-300'>
+                <input type='radio' name='my-accordion-2' />
+                <div className='collapse-title font-semibold'>
+                    Horários do Funchal
+                </div>
+                <div className='collapse-content text-sm'>
+                    O serviço excecional dos Horários do Funchal funcionará nos
+                    dias 14 de agosto (18:00-04:00) e 15 de agosto
+                    (09:30-18:30), com tarifas especiais de 1,80 € ida e 3,20 €
+                    ida e volta.
+                </div>
+            </div>
+            {/* <div className='collapse collapse-arrow border border-base-300'>
+                <input type='radio' name='my-accordion-2' />
+                <div className='collapse-title font-semibold'>
+                    Outra coisa 2
+                </div>
+                <div className='collapse-content text-sm'>
+                    ainda mais coiisinhas
+                </div>
+            </div> */}
+        </div>
+    );
+}

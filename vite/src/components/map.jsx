@@ -13,7 +13,7 @@ import {
     Tooltip,
     useMap,
     Pane,
-    CircleMarker,
+    Marker,
 } from 'react-leaflet';
 import {
     venda_de_carne,
@@ -39,7 +39,10 @@ import {
     acesso_local_3,
     circulacao_habitual_3,
 } from '@/data/transito/17';
-import { pc_meios, pc_psocorros } from '@/data/points';
+import { pc_meios, pc_psocorros, taxi } from '@/data/points';
+import bombeiro from '@/assets/pc-ft.svg';
+import cruz from '@/assets/pc-rc.svg';
+import taxisvg from '@/assets/taxi.svg';
 
 const day1 = [circulacao_habitual_1, acesso_local_1, sentido_unico_1];
 const day2 = [
@@ -62,6 +65,7 @@ const barracas = [
     { slug: 'pequenos_balcoes', poly: pequenos_balcoes, type: 'poly' },
     { slug: 'pc_meios', poly: pc_meios, type: 'point' },
     { slug: 'pc_psocorros', poly: pc_psocorros, type: 'point' },
+    { slug: 'Taxi', poly: taxi, type: 'point' },
 ];
 
 export default function Map({ day, barracaState }) {
@@ -109,6 +113,24 @@ export default function Map({ day, barracaState }) {
     );
 }
 
+const bombeiroIcon = L.icon({
+    iconUrl: bombeiro,
+    iconSize: [20, 20],
+    iconAnchor: [10, 10],
+});
+
+const cruzIcon = L.icon({
+    iconUrl: cruz,
+    iconSize: [20, 20],
+    iconAnchor: [10, 10],
+});
+
+const taxiIcon = L.icon({
+    iconUrl: taxisvg,
+    iconSize: [20, 20],
+    iconAnchor: [10, 10],
+});
+
 function RenderPolygons({ poly, type }) {
     return poly.features.map((feature, index) => {
         const styles = feature.styles;
@@ -139,16 +161,23 @@ function RenderPolygons({ poly, type }) {
                 </Tooltip>
             </Polygon>
         ) : (
-            <CircleMarker
+            <Marker
                 key={index}
                 radius={6}
-                center={positions}
+                position={positions}
                 pathOptions={styles}
+                icon={
+                    feature.info?.nome === 'Primeiros socorros'
+                        ? cruzIcon
+                        : feature.info?.nome === 'Taxi'
+                        ? taxiIcon
+                        : bombeiroIcon
+                }
             >
                 <Tooltip direction='top' sticky>
                     {feature.info?.nome}
                 </Tooltip>
-            </CircleMarker>
+            </Marker>
         );
     });
 }
@@ -267,6 +296,12 @@ export function Legend({ day, barracaState }) {
             break;
     }
 
+    if (
+        Object.values(barracaState).every((value) => value === false) &&
+        data == null
+    )
+        return;
+
     return (
         <div
             className={
@@ -308,7 +343,28 @@ export function Legend({ day, barracaState }) {
                                         key={index}
                                         className='flex items-center gap-2'
                                     >
-                                        <div className={item.tw}></div>
+                                        {item.slug === 'pc_meios' ? (
+                                            <img
+                                                src={bombeiro}
+                                                height={16}
+                                                width={16}
+                                            />
+                                        ) : item.slug === 'pc_psocorros' ? (
+                                            <img
+                                                src={cruz}
+                                                height={16}
+                                                width={16}
+                                            />
+                                        ) : item.slug === 'Taxi' ? (
+                                            <img
+                                                src={taxisvg}
+                                                height={16}
+                                                width={16}
+                                            />
+                                        ) : (
+                                            <div className={item.tw}></div>
+                                        )}
+                                        {/* <div className={item.tw}></div> */}
                                         <span>{item.legend}</span>
                                     </div>
                                 );

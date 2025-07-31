@@ -6,6 +6,7 @@ import Information from '@/pages/info/page';
 import Maps from '@/pages/maps/page';
 import Page from '@/pages/app/index';
 import Media from '@/pages/media/page';
+import Festa from '@/pages/festa/page';
 
 const router = createBrowserRouter([
     {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
             {
                 path: 'midia',
                 element: <Media />,
+            },
+            {
+                path: 'festa',
+                element: <Festa />,
             },
         ],
     },

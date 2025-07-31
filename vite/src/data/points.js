@@ -124,3 +124,30 @@ export const pc_psocorros = {
         },
     ],
 };
+
+export const taxi = {
+    type: 'FeatureCollection',
+    name: 'taxi_1',
+    crs: {
+        type: 'name',
+        properties: { name: 'urn:ogc:def:crs:OGC:1.3:CRS84' },
+    },
+    features: [
+        {
+            type: 'Feature',
+            properties: { id: '1' },
+            info: {
+                nome: 'Taxi',
+            },
+            styles: {
+                color: '#E63946',
+                fillColor: '#E63946',
+                fillOpacity: 0.5,
+            },
+            geometry: {
+                type: 'Point',
+                coordinates: [-16.90360606011512, 32.676769825748508],
+            },
+        },
+    ],
+};

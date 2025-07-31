@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from 'react-router';
-import { Home, MapPin, Phone, Info, Camera } from 'lucide-react';
+import { Home, MapPin, ScrollText, Info, Camera, BookOpen } from 'lucide-react';
 import { ModeToggle } from '@/components/theme-toggle';
 import { useTheme } from '@/hooks/useTheme';
 import logo from '@/assets/logo.png';
@@ -7,10 +7,11 @@ import logoDark from '@/assets/logo-dark.png';
 import icon from '@/assets/icon.png';
 
 const navItems = [
-    { href: '/app', icon: Home, label: 'Home' },
-    { href: '/app/map', icon: MapPin, label: 'Mapas' },
-    { href: '/app/contact', icon: Phone, label: 'Contactos' },
-    { href: '/app/info', icon: Info, label: 'Informação' },
+    // { href: '/app', icon: Home, label: 'Home' },
+    { href: '/app/festa', icon: BookOpen, label: 'Sobre' },
+    { href: '/app/map', icon: MapPin, label: 'Localização' },
+    { href: '/app/info', icon: Info, label: 'Informações' },
+    { href: '/app/contact', icon: ScrollText, label: 'Publicações' },
     { href: '/app/midia', icon: Camera, label: 'Imagens' },
 ];
 
@@ -19,7 +20,7 @@ export function DesktopNav() {
     const { theme } = useTheme();
 
     return (
-        <div className='bg-base-200 shadow-sm m-2 mx-auto rounded-lg max-w-full lg:max-w-[80%] navbar'>
+        <div className='bg-base-200 shadow-sm m-2 mx-auto rounded-lg max-w-full lg:max-w-[90%] navbar'>
             <div className='flex flex-row flex-1 items-center gap-2'>
                 <NavLink to='/app' className='flex items-center gap-2 ml-2'>
                     <div className='pr-2 border-gray-300/50 border-r w-[120px] h-10'>
@@ -45,9 +46,9 @@ export function DesktopNav() {
             </div>
 
             <div className='flex flex-row flex-none items-center gap-2'>
-                {navItems.map((item, index) => {
+                {navItems.map((item) => {
                     const isActive = pathname === item.href;
-                    if (index === 0) return;
+                    // if (index === 0) return;
                     return (
                         <NavLink
                             key={item.href}

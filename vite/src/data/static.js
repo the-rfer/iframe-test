@@ -117,18 +117,50 @@ export const contacts = [
     },
 ];
 
+export const fileList2 = {
+    outras: [
+        {
+            name: 'Teleférico',
+            file: 'horarios.png',
+        },
+        {
+            name: 'Festa do Monte 2025',
+            file: 'arraial.png',
+        },
+    ],
+    transito: [
+        {
+            name: 'Condicionamento das estradas (edital)',
+            file: 'edital.pdf',
+        },
+    ],
+    dgep: [
+        {
+            name: 'Prestação de serviços de restauração ou de bebidas não sedentárias e venda ambulânte (edital)',
+            file: 'edital2.pdf',
+        },
+    ],
+
+    tontos: [
+        {
+            name: 'Parecer - festa da Nossa Senhora do Monte',
+            file: 'edital3.pdf',
+        },
+        {
+            name: 'Regulamento Espaços Verdes, Parques e Jardins',
+            file: 'edital4.pdf',
+        },
+    ],
+};
+
 export const fileList = [
     {
-        name: 'Horários do teleférico (Campanha viagens)',
+        name: 'Teleférico',
         file: 'horarios.png',
     },
     {
-        name: 'Festas do Monte 2025',
+        name: 'Festa do Monte 2025',
         file: 'arraial.png',
-    },
-    {
-        name: 'Condicionamento das estradas (mapa)',
-        file: 'estradas.pdf',
     },
     {
         name: 'Condicionamento das estradas (edital)',
@@ -170,6 +202,11 @@ export const legenda = [
     {
         legend: 'Primeiros socorros',
         slug: 'pc_psocorros',
+        tw: 'bg-[#E63946] w-4 h-4 mr-2 relative rounded-full',
+    },
+    {
+        legend: 'Praça de taxis',
+        slug: 'Taxi',
         tw: 'bg-[#E63946] w-4 h-4 mr-2 relative rounded-full',
     },
 ];
