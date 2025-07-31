@@ -22,17 +22,17 @@ const barracasValues = [
 ];
 const pcivil = [
     {
-        name: 'Meios proteção civil',
+        name: 'Meios de Proteção Civil',
         slug: 'pc_meios',
     },
     {
-        name: 'Ponto socorro',
+        name: 'Primeiros Socorros',
         slug: 'pc_psocorros',
     },
 ];
 const outros = [
     {
-        name: 'Praça de taxis',
+        name: 'Praça de táxis',
         slug: 'Taxi',
     },
 ];

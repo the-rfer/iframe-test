@@ -195,7 +195,7 @@ export const legenda = [
         tw: 'bg-[#dd11dd] w-4 h-3 mr-2 relative',
     },
     {
-        legend: 'Meios proteção civil',
+        legend: 'Meios de Proteção Civil',
         slug: 'pc_meios',
         tw: 'bg-[#D1495B] w-4 h-4 mr-2 relative rounded-full',
     },
@@ -205,7 +205,7 @@ export const legenda = [
         tw: 'bg-[#E63946] w-4 h-4 mr-2 relative rounded-full',
     },
     {
-        legend: 'Praça de taxis',
+        legend: 'Praça de táxis',
         slug: 'Taxi',
         tw: 'bg-[#E63946] w-4 h-4 mr-2 relative rounded-full',
     },

@@ -32,10 +32,10 @@ export default function Information() {
                             Nesta secção encontra tudo o que precisa para
                             aproveitar ao máximo a Festa do Monte: horários das
                             novenas e missas, informações sobre o teleférico,
-                            percursos das procissões, pontos de apoio, serviços
-                            disponíveis e outras orientações práticas. <br />
+                            pontos de apoio, serviços disponíveis e outras
+                            orientações práticas. <br />
                             Consulte aqui os detalhes essenciais para uma
-                            experiência organizada, segura e memorável.{' '}
+                            experiência organizada, segura e memorável.
                         </p>
                     </div>
                     <Infos />
@@ -75,7 +75,7 @@ function Infos() {
                     </fieldset>
                     <fieldset className='p-4 border border-base-100 rounded-box'>
                         <legend className='fieldset-legend'>
-                            Madeira cable car
+                            Teleféricos da Madeira, S.A.
                         </legend>
                         <div className='gap-5 columns-1 md:columns-2 my-2 max-w-4xl'>
                             <div className='break-inside-avoid'>
