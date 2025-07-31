@@ -32,7 +32,7 @@ const pcivil = [
 ];
 const outros = [
     {
-        name: 'Praça de táxis',
+        name: 'Praça de Táxis',
         slug: 'Taxi',
     },
 ];

@@ -124,7 +124,7 @@ export const fileList2 = {
             file: 'horarios.png',
         },
         {
-            name: 'Festa do Monte 2025',
+            name: 'Programa da Festa do Monte 2025',
             file: 'arraial.png',
         },
     ],
@@ -143,12 +143,23 @@ export const fileList2 = {
 
     tontos: [
         {
-            name: 'Parecer - festa da Nossa Senhora do Monte',
+            name: 'Parecer - Festa da Nossa Senhora do Monte',
             file: 'edital3.pdf',
         },
         {
             name: 'Regulamento Espaços Verdes, Parques e Jardins',
             file: 'edital4.pdf',
+        },
+    ],
+
+    autistas: [
+        {
+            name: 'Localização dos Sanitários Portáteis',
+            file: 'sanitarios.jpg',
+        },
+        {
+            name: 'Localização dos Contentores',
+            file: 'contentores.pdf',
         },
     ],
 };
@@ -205,7 +216,7 @@ export const legenda = [
         tw: 'bg-[#E63946] w-4 h-4 mr-2 relative rounded-full',
     },
     {
-        legend: 'Praça de táxis',
+        legend: 'Praça de Táxis',
         slug: 'Taxi',
         tw: 'bg-[#E63946] w-4 h-4 mr-2 relative rounded-full',
     },

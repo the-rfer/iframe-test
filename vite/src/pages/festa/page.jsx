@@ -67,7 +67,7 @@ export default function Page() {
                     <div className='p-4 border-b border-base-100'>
                         <h2 className='flex items-center font-semibold text-lg'>
                             <Clock className='mr-2 w-5 h-5 text-green-600' />
-                            Calendário
+                            Programa
                         </h2>
                     </div>
 

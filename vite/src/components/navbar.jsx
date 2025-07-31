@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from 'react-router';
-import { Home, MapPin, ScrollText, Info, Camera, BookOpen } from 'lucide-react';
+import { MapPin, ScrollText, Info, Camera, BookOpen } from 'lucide-react';
 import { ModeToggle } from '@/components/theme-toggle';
 import { useTheme } from '@/hooks/useTheme';
 import logo from '@/assets/logo.png';

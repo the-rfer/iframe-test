@@ -55,6 +55,15 @@ export default function Contacts() {
 
                         <fieldset className='p-4 border border-base-100 rounded-box'>
                             <legend className='fieldset-legend'>
+                                Divisão de Inovação e Planeamento - Ambiente
+                            </legend>
+                            <div className='gap-5 my-2 max-w-4xl'>
+                                <Downloads files={fileList2['autistas']} />
+                            </div>
+                        </fieldset>
+
+                        <fieldset className='p-4 border border-base-100 rounded-box'>
+                            <legend className='fieldset-legend'>
                                 Outras informações
                             </legend>
                             <div className='gap-5 my-2 max-w-4xl'>

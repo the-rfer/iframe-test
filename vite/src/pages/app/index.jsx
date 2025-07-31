@@ -1,4 +1,4 @@
-import { MapPin, Phone, Info, Calendar } from 'lucide-react';
+import { MapPin, ScrollText, Info, Calendar } from 'lucide-react';
 import { dateCounter } from '@/lib/date';
 import { NavLink } from 'react-router';
 import { ModeToggle } from '@/components/theme-toggle';
@@ -36,7 +36,7 @@ export default function App() {
                         </div>
                         <div>
                             <h3 className='font-semibold text-lg'>
-                                Informação Rápida
+                                Resumo do evento
                             </h3>
                         </div>
                     </div>
@@ -95,33 +95,11 @@ export default function App() {
                                 </div>
                             </div>
                             <p className='text-sm text-base-content text-justify'>
-                                descubra os percursos das procissões, áreas de
-                                restauração, bancas de venda e consulte as
-                                interdições de trânsito e acessos condicionados.
-                            </p>
-                        </div>
-                    </NavLink>
-
-                    <NavLink to='/app/info' className='block'>
-                        <div className='bg-base-200 shadow-md hover:shadow-lg p-6 rounded-xl transition-shadow'>
-                            <div className='flex items-center mb-3'>
-                                <div className='bg-green-100 mr-4 p-3 rounded-lg'>
-                                    <Info className='w-6 h-6 text-green-600' />
-                                </div>
-                                <div>
-                                    <h3 className='font-semibold text-lg'>
-                                        Editais e Informações
-                                    </h3>
-                                    <p className='text-sm'>
-                                        Cronograma, trânsito e detalhes
-                                    </p>
-                                </div>
-                            </div>
-                            <p className='text-sm text-base-content text-justify'>
-                                Consulte o programa completo, horários das
-                                celebrações, alterações ao trânsito e todos os
-                                pormenores relevantes para viver as festas em
-                                segurança e sem imprevistos.
+                                Consulte o mapa interativo da Festa do Monte,
+                                onde poderá visualizar as principais áreas do
+                                evento, incluindo zonas de restauração,
+                                barracas, bem como informações sobre interdições
+                                de trânsito e acessos condicionados.
                             </p>
                         </div>
                     </NavLink>
@@ -129,12 +107,37 @@ export default function App() {
                     <NavLink to='/app/contact' className='block'>
                         <div className='bg-base-200 shadow-md hover:shadow-lg p-6 rounded-xl transition-shadow'>
                             <div className='flex items-center mb-3'>
-                                <div className='bg-purple-100 mr-4 p-3 rounded-lg'>
-                                    <Phone className='w-6 h-6 text-purple-600' />
+                                <div className='bg-green-100 mr-4 p-3 rounded-lg'>
+                                    <ScrollText className='w-6 h-6 text-green-600' />
                                 </div>
                                 <div>
                                     <h3 className='font-semibold text-lg'>
-                                        Contatos Úteis
+                                        Publicações Institucionais
+                                    </h3>
+                                    <p className='text-sm'>
+                                        Programa, trânsito e detalhes
+                                    </p>
+                                </div>
+                            </div>
+                            <p className='text-sm text-base-content text-justify'>
+                                Aceda a informação detalhada sobre a Festa do
+                                Monte, incluindo o programa oficial, horários
+                                das celebrações, alterações à circulação
+                                rodoviária e demais elementos relevantes para um
+                                acompanhamento seguro e organizado do evento.
+                            </p>
+                        </div>
+                    </NavLink>
+
+                    <NavLink to='/app/info' className='block'>
+                        <div className='bg-base-200 shadow-md hover:shadow-lg p-6 rounded-xl transition-shadow'>
+                            <div className='flex items-center mb-3'>
+                                <div className='bg-purple-100 mr-4 p-3 rounded-lg'>
+                                    <Info className='w-6 h-6 text-purple-600' />
+                                </div>
+                                <div>
+                                    <h3 className='font-semibold text-lg'>
+                                        Informações Úteis
                                     </h3>
                                     <p className='text-sm'>
                                         Números de emergência e suporte
@@ -142,9 +145,11 @@ export default function App() {
                                 </div>
                             </div>
                             <p className='text-sm text-base-content text-justify'>
-                                Tenha à mão os números de emergência, apoio
-                                médico e outros contactos essenciais para
-                                qualquer eventualidade.
+                                Disponibiliza-se um conjunto de contactos
+                                relevantes, incluindo serviços de emergência,
+                                apoio médico e outros serviços de apoio, que
+                                poderão ser acionados em caso de necessidade
+                                durante o evento.
                             </p>
                         </div>
                     </NavLink>

@@ -120,15 +120,18 @@ function Infos() {
                     ida e volta.
                 </div>
             </div>
-            {/* <div className='collapse collapse-arrow border border-base-300'>
+            <div className='collapse collapse-arrow border border-base-300'>
                 <input type='radio' name='my-accordion-2' />
                 <div className='collapse-title font-semibold'>
-                    Outra coisa 2
+                    Parque de Estacionamento Almirante Reis
                 </div>
                 <div className='collapse-content text-sm'>
-                    ainda mais coiisinhas
+                    Horário de funcionamento: 24 horas. <br />
+                    Estacionamento gratuito das 18h do dia 14 às 02h do dia 15
+                    mediante a apresentação do bilhete do teleférico na caixa
+                    central.
                 </div>
-            </div> */}
+            </div>
         </div>
     );
 }
