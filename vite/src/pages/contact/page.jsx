@@ -11,7 +11,7 @@ export default function Contacts() {
 
             <div className='space-y-6 mx-auto px-4 py-6 container'>
                 <div className='bg-base-300 shadow-sm rounded-lg overflow-hidden'>
-                    <div className='p-4 border-b border-base-100'>
+                    <div className='p-4'>
                         <h2 className='flex items-center font-semibold text-lg'>
                             <ScrollText className='mr-2 w-5 h-5 text-amber-600' />
                             Publicações oficiais

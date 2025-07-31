@@ -62,7 +62,7 @@ function Infos() {
                                     Horário de funcionamento
                                 </span>
                                 <br />
-                                9:00h as 17:00h
+                                9:00h às 17:00h
                             </div>
                             <div>
                                 <span className='font-bold'>
@@ -83,7 +83,7 @@ function Infos() {
                                     Horário de funcionamento
                                 </span>
                                 <br />
-                                8:45h as 17:45h
+                                8:45h às 17:45h
                             </div>
                             <div className='break-inside-avoid'>
                                 <p className='mb-2'>
@@ -93,7 +93,7 @@ function Infos() {
                                     <span className='mr-1'>
                                         14 e 15 de Agosto -
                                     </span>
-                                    18:00h às 1:00h
+                                    das 18:00h à 1:00h
                                 </p>
 
                                 <p>
