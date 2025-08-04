@@ -127,6 +127,10 @@ export const fileList2 = {
             name: 'Programa da Festa do Monte 2025',
             file: 'arraial.png',
         },
+        {
+            name: 'Horários do Funchal',
+            file: 'hf.pdf',
+        },
     ],
     transito: [
         {
