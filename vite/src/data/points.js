@@ -603,6 +603,42 @@ export const c_papel = {
                 coordinates: [-16.90312051722697, 32.676661251122454],
             },
         },
+
+        {
+            type: 'Feature',
+            properties: {
+                OBJECTID: 4290.0,
+                ID: 0.0,
+                NUM_EVENTO: 162.0,
+                EVENTO: null,
+                ENT_RES_EV: null,
+                LOCAL_: null,
+                PERIODO: null,
+                TIPO_RES: 'Papelão',
+                COR: null,
+                OBS: null,
+                TAMNHO_CON: '1100L',
+                ANO: null,
+            },
+            info: {
+                nome: 'Papelão',
+            },
+            geometry: {
+                type: 'Point',
+                coordinates: [-16.899259880211314, 32.67636737557401],
+            },
+        },
+    ],
+};
+
+export const c_emb = {
+    type: 'FeatureCollection',
+    name: 'ContentoresFestadoMonte2025_1',
+    crs: {
+        type: 'name',
+        properties: { name: 'urn:ogc:def:crs:OGC:1.3:CRS84' },
+    },
+    features: [
         {
             type: 'Feature',
             properties: {
@@ -627,38 +663,6 @@ export const c_papel = {
                 coordinates: [-16.902117856808225, 32.67568236647611],
             },
         },
-        {
-            type: 'Feature',
-            properties: {
-                OBJECTID: 4290.0,
-                ID: 0.0,
-                NUM_EVENTO: 162.0,
-                EVENTO: null,
-                ENT_RES_EV: null,
-                LOCAL_: null,
-                PERIODO: null,
-                TIPO_RES: 'Papelão',
-                COR: null,
-                OBS: null,
-                TAMNHO_CON: '1100L',
-                ANO: null,
-            },
-            geometry: {
-                type: 'Point',
-                coordinates: [-16.899259880211314, 32.67636737557401],
-            },
-        },
-    ],
-};
-
-export const c_emb = {
-    type: 'FeatureCollection',
-    name: 'ContentoresFestadoMonte2025_1',
-    crs: {
-        type: 'name',
-        properties: { name: 'urn:ogc:def:crs:OGC:1.3:CRS84' },
-    },
-    features: [
         {
             type: 'Feature',
             properties: {
