@@ -241,7 +241,7 @@ export const legenda = [
         tw: 'bg-[#E63946] w-4 h-4 mr-2 relative rounded-full',
     },
     {
-        legend: 'R.I',
+        legend: 'Resíduos Indiferenciados',
         slug: 'R_I',
         tw: 'bg-[#E63946] w-4 h-4 mr-2 relative rounded-full',
     },

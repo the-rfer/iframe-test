@@ -34,7 +34,7 @@ const lixo = [
     { slug: 'Embalão', name: 'Embalão' },
     { slug: 'Vidrão', name: 'Vidrão' },
     { slug: 'Papelão', name: 'Papelão' },
-    { slug: 'R_I', name: 'R.I' },
+    { slug: 'R_I', name: 'Resíduos Indiferenciados' },
 ];
 const outros = [
     {
@@ -151,7 +151,7 @@ export function Filter({ day, setDay, barracas, setBarracas }) {
 
                 <fieldset className='bg-base-100 p-4 border border-base-300 rounded-box'>
                     <legend className='fieldset-legend'>
-                        Departamento do Ambiente - Reciclágem
+                        Divisão de Inovação e Planeamento - Reciclágem
                     </legend>
                     <div className='gap-5 columns-1 md:columns-2 my-2 max-w-4xl'>
                         {lixo.map((barraca) => (
