@@ -17,6 +17,11 @@ export default function Maps() {
         pc_meios: true,
         pc_psocorros: true,
         Taxi: true,
+        Sanitários: true,
+        Embalão: true,
+        Vidrão: true,
+        Papelão: true,
+        R_I: true,
     });
 
     const isMobile = useIsMobile();

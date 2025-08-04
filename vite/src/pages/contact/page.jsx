@@ -4,7 +4,6 @@ import { ScrollText } from 'lucide-react';
 import { Downloads } from '@/components/downloads';
 
 export default function Contacts() {
-    console.log(fileList2['outras'].map((file) => file.name));
     return (
         <div className='mx-auto pb-20 md:max-w-2xl min-h-screen'>
             <MobileHeader title='Contactos' />
@@ -21,8 +20,6 @@ export default function Contacts() {
                             documentação oficial relativa à Festa do Monte.
                         </p>
                     </div>
-                    {/* aqui */}
-                    {/* <Downloads files={fileList} /> */}
                     <div className='mx-2 mb-2'>
                         <fieldset className='p-4 border border-base-100 rounded-box'>
                             <legend className='fieldset-legend'>

@@ -39,10 +39,24 @@ import {
     acesso_local_3,
     circulacao_habitual_3,
 } from '@/data/transito/17';
-import { pc_meios, pc_psocorros, taxi } from '@/data/points';
+import {
+    pc_meios,
+    pc_psocorros,
+    taxi,
+    sanitarios,
+    c_vidro,
+    c_papel,
+    c_emb,
+    c_ri,
+} from '@/data/points';
 import bombeiro from '@/assets/pc-ft.svg';
 import cruz from '@/assets/pc-rc.svg';
 import taxisvg from '@/assets/taxi.svg';
+import emb from '@/assets/embalao.svg';
+import pap from '@/assets/papelao.svg';
+import ri from '@/assets/ri.svg';
+import vid from '@/assets/vidrao.svg';
+import wc from '@/assets/wc.svg';
 
 const day1 = [circulacao_habitual_1, acesso_local_1, sentido_unico_1];
 const day2 = [
@@ -66,6 +80,11 @@ const barracas = [
     { slug: 'pc_meios', poly: pc_meios, type: 'point' },
     { slug: 'pc_psocorros', poly: pc_psocorros, type: 'point' },
     { slug: 'Taxi', poly: taxi, type: 'point' },
+    { slug: 'Sanitários', poly: sanitarios, type: 'point' },
+    { slug: 'Embalão', poly: c_emb, type: 'point' },
+    { slug: 'Vidrão', poly: c_vidro, type: 'point' },
+    { slug: 'Papelão', poly: c_papel, type: 'point' },
+    { slug: 'R_I', poly: c_ri, type: 'point' },
 ];
 
 export default function Map({ day, barracaState }) {
@@ -131,6 +150,36 @@ const taxiIcon = L.icon({
     iconAnchor: [10, 10],
 });
 
+const saniIcon = L.icon({
+    iconUrl: wc,
+    iconSize: [20, 20],
+    iconAnchor: [10, 10],
+});
+
+const viIcon = L.icon({
+    iconUrl: vid,
+    iconSize: [20, 20],
+    iconAnchor: [10, 10],
+});
+
+const papIcon = L.icon({
+    iconUrl: pap,
+    iconSize: [20, 20],
+    iconAnchor: [10, 10],
+});
+
+const embIcon = L.icon({
+    iconUrl: emb,
+    iconSize: [20, 20],
+    iconAnchor: [10, 10],
+});
+
+const riIcon = L.icon({
+    iconUrl: ri,
+    iconSize: [20, 20],
+    iconAnchor: [10, 10],
+});
+
 function RenderPolygons({ poly, type }) {
     return poly.features.map((feature, index) => {
         const styles = feature.styles;
@@ -171,6 +220,16 @@ function RenderPolygons({ poly, type }) {
                         ? cruzIcon
                         : feature.info?.nome === 'Taxi'
                         ? taxiIcon
+                        : feature.info?.nome === 'Sanitários'
+                        ? saniIcon
+                        : feature.info?.nome === 'Vidrão'
+                        ? viIcon
+                        : feature.info?.nome === 'Papelão'
+                        ? papIcon
+                        : feature.info?.nome === 'Embalão'
+                        ? embIcon
+                        : feature.info?.nome === 'R.I'
+                        ? riIcon
                         : bombeiroIcon
                 }
             >
@@ -361,10 +420,39 @@ export function Legend({ day, barracaState }) {
                                                 height={16}
                                                 width={16}
                                             />
+                                        ) : item.slug === 'Sanitários' ? (
+                                            <img
+                                                src={wc}
+                                                height={16}
+                                                width={16}
+                                            />
+                                        ) : item.slug === 'Embalão' ? (
+                                            <img
+                                                src={emb}
+                                                height={16}
+                                                width={16}
+                                            />
+                                        ) : item.slug === 'Vidrão' ? (
+                                            <img
+                                                src={vid}
+                                                height={16}
+                                                width={16}
+                                            />
+                                        ) : item.slug === 'Papelão' ? (
+                                            <img
+                                                src={pap}
+                                                height={16}
+                                                width={16}
+                                            />
+                                        ) : item.slug === 'R_I' ? (
+                                            <img
+                                                src={ri}
+                                                height={16}
+                                                width={16}
+                                            />
                                         ) : (
                                             <div className={item.tw}></div>
                                         )}
-                                        {/* <div className={item.tw}></div> */}
                                         <span>{item.legend}</span>
                                     </div>
                                 );

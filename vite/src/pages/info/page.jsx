@@ -86,7 +86,7 @@ function Infos() {
                                 8:45h às 17:45h
                             </div>
                             <div className='break-inside-avoid'>
-                                <p className='mb-2'>
+                                <div className='mb-2'>
                                     <p className='font-bold'>
                                         Horário extraordinário
                                     </p>
@@ -94,7 +94,7 @@ function Infos() {
                                         14 e 15 de Agosto -
                                     </span>
                                     das 18:00h à 1:00h
-                                </p>
+                                </div>
 
                                 <p>
                                     Estacionamento gratuito Estacione o seu

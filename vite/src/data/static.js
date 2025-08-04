@@ -220,6 +220,31 @@ export const legenda = [
         slug: 'Taxi',
         tw: 'bg-[#E63946] w-4 h-4 mr-2 relative rounded-full',
     },
+    {
+        legend: 'Sanitários',
+        slug: 'Sanitários',
+        tw: 'bg-[#E63946] w-4 h-4 mr-2 relative rounded-full',
+    },
+    {
+        legend: 'Embalão',
+        slug: 'Embalão',
+        tw: 'bg-[#E63946] w-4 h-4 mr-2 relative rounded-full',
+    },
+    {
+        legend: 'Vidrão',
+        slug: 'Vidrão',
+        tw: 'bg-[#E63946] w-4 h-4 mr-2 relative rounded-full',
+    },
+    {
+        legend: 'Papelão',
+        slug: 'Papelão',
+        tw: 'bg-[#E63946] w-4 h-4 mr-2 relative rounded-full',
+    },
+    {
+        legend: 'R.I',
+        slug: 'R_I',
+        tw: 'bg-[#E63946] w-4 h-4 mr-2 relative rounded-full',
+    },
 ];
 
 export const day_1 = [
