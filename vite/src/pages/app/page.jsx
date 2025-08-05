@@ -7,8 +7,9 @@ export default function App() {
 
     return (
         <div className='w-full h-screen overflow-hidden overflow-y-auto'>
-            {isMobile ? <MobileNav /> : <DesktopNav />}
+            {!isMobile && <DesktopNav />}
             <Outlet />
+            {isMobile && <MobileNav />}
         </div>
     );
 }

@@ -79,7 +79,7 @@ export function MobileNav() {
     const { pathname } = useLocation();
 
     return (
-        <nav className='right-0 bottom-0 left-0 z-[9999999] fixed bg-base-200 px-4 py-2 border-neutral-content border-t'>
+        <nav className='bottom-0 left-0 z-[9999999] sticky bg-base-200 px-4 py-2 border-neutral-content border-t'>
             {/* <nav className='bg-white px-4 py-2 border-gray-200 border-t'> */}
             <div className='flex justify-around mx-auto max-w-md'>
                 {navItems.map((item) => {
