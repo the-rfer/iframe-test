@@ -19,10 +19,10 @@ export default function Maps() {
         pc_psocorros: true,
         Taxi: true,
         Sanitários: true,
-        Embalão: true,
-        Vidrão: true,
-        Papelão: true,
-        R_I: true,
+        Embalão: false,
+        Vidrão: false,
+        Papelão: false,
+        R_I: false,
     });
 
     const isMobile = useIsMobile();
