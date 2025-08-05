@@ -6,7 +6,7 @@ export default function App() {
     const isMobile = useIsMobile();
 
     return (
-        <div className='w-full h-screen overflow-hidden overflow-y-auto'>
+        <div className='w-full h-screen'>
             <DesktopNav />
             <Outlet />
             <MobileNav />
