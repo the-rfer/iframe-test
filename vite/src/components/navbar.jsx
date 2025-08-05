@@ -20,7 +20,7 @@ export function DesktopNav() {
     const { theme } = useTheme();
 
     return (
-        <div className='bg-base-200 shadow-sm m-2 mx-auto rounded-lg max-w-full lg:max-w-[90%] navbar'>
+        <div className='hidden md:flex bg-base-200 shadow-sm m-2 mx-auto rounded-lg max-w-full lg:max-w-[90%] navbar'>
             <div className='flex flex-row flex-1 items-center gap-2'>
                 <NavLink to='/app' className='flex items-center gap-2 ml-2'>
                     <div className='pr-2 border-gray-300/50 border-r w-[120px] h-10'>
@@ -79,7 +79,7 @@ export function MobileNav() {
     const { pathname } = useLocation();
 
     return (
-        <nav className='bottom-0 z-[90000000] sticky bg-base-300 py-2'>
+        <nav className='md:hidden bottom-0 z-[90000000] sticky bg-base-300 py-2'>
             {/* <nav className='bg-white px-4 py-2 border-gray-200 border-t'> */}
 
             <div className='flex justify-around mx-auto max-w-md'>
