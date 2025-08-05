@@ -79,8 +79,9 @@ export function MobileNav() {
     const { pathname } = useLocation();
 
     return (
-        <nav className='bottom-0 left-0 z-[9999999] sticky bg-base-200 px-4 py-2 border-neutral-content border-t'>
+        <nav className='bottom-0 z-[90000000] sticky bg-base-300 py-2'>
             {/* <nav className='bg-white px-4 py-2 border-gray-200 border-t'> */}
+
             <div className='flex justify-around mx-auto max-w-md'>
                 {navItems.map((item) => {
                     const isActive = pathname === item.href;
