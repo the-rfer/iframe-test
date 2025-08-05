@@ -1,10 +1,10 @@
-import { NavLink, useLocation } from 'react-router';
-import { MapPin, ScrollText, Info, Camera, BookOpen } from 'lucide-react';
+import icon from '@/assets/icon.png';
+import logoDark from '@/assets/logo-dark.png';
+import logo from '@/assets/logo.png';
 import { ModeToggle } from '@/components/theme-toggle';
 import { useTheme } from '@/hooks/useTheme';
-import logo from '@/assets/logo.png';
-import logoDark from '@/assets/logo-dark.png';
-import icon from '@/assets/icon.png';
+import { BookOpen, Camera, Info, MapPin, ScrollText } from 'lucide-react';
+import { NavLink, useLocation } from 'react-router';
 
 const navItems = [
     // { href: '/app', icon: Home, label: 'Home' },
@@ -12,7 +12,7 @@ const navItems = [
     { href: '/app/map', icon: MapPin, label: 'Localização' },
     { href: '/app/info', icon: Info, label: 'Informações' },
     { href: '/app/contact', icon: ScrollText, label: 'Publicações' },
-    { href: '/app/midia', icon: Camera, label: 'Imagens' },
+    { href: '/app/midia', icon: Camera, label: 'Galeria' },
 ];
 
 export function DesktopNav() {
