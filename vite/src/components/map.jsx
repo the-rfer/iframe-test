@@ -41,6 +41,7 @@ import {
 } from '@/data/transito/17';
 import {
     pc_meios,
+    pc_meios_2,
     pc_psocorros,
     taxi,
     sanitarios,
@@ -77,8 +78,6 @@ const barracas = [
     { slug: 'venda_de_velas', poly: venda_de_velas, type: 'poly' },
     { slug: 'meio_motorizado', poly: meio_motorizado, type: 'poly' },
     { slug: 'pequenos_balcoes', poly: pequenos_balcoes, type: 'poly' },
-    { slug: 'pc_meios', poly: pc_meios, type: 'point' },
-    { slug: 'pc_psocorros', poly: pc_psocorros, type: 'point' },
     { slug: 'Taxi', poly: taxi, type: 'point' },
     { slug: 'Sanitários', poly: sanitarios, type: 'point' },
     { slug: 'Embalão', poly: c_emb, type: 'point' },
@@ -87,7 +86,10 @@ const barracas = [
     { slug: 'R_I', poly: c_ri, type: 'point' },
 ];
 
-export default function Map({ day, barracaState }) {
+const pc_main = [pc_meios, pc_psocorros];
+const pc_rest = [pc_meios_2];
+
+export default function Map({ day, dayPc, barracaState }) {
     const isMobile = useIsMobile();
 
     return (
@@ -125,8 +127,11 @@ export default function Map({ day, barracaState }) {
                 ))}
 
             <Transito day={day} />
+            <Pc day={dayPc} barracaState={barracaState} />
 
-            {!isMobile && <Legend day={day} barracaState={barracaState} />}
+            {!isMobile && (
+                <Legend day={day} dayPc={dayPc} barracaState={barracaState} />
+            )}
             <ScaleControl position='bottomleft' imperial={false} />
         </MapContainer>
     );
@@ -269,6 +274,25 @@ function Transito({ day }) {
     }
 }
 
+function Pc({ day }) {
+    if (day === 0) return;
+    const prevDay = day;
+    console.log('dia ', day);
+    switch (prevDay) {
+        case 1:
+        case 3:
+            return pc_rest.map((poly, i) => (
+                <RenderPolygons key={i} poly={poly} type='point' />
+            ));
+        case 2:
+            return pc_main.map((poly, i) => (
+                <RenderPolygons key={i} poly={poly} type='point' />
+            ));
+        default:
+            return null;
+    }
+}
+
 function ArrowDecorator({ positions, color }) {
     const map = useMap();
 
@@ -334,7 +358,7 @@ function ArrowDecorator({ positions, color }) {
     return null;
 }
 
-export function Legend({ day, barracaState }) {
+export function Legend({ day, dayPc, barracaState }) {
     const isMobile = useIsMobile();
 
     let data;

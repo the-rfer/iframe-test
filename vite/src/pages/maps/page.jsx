@@ -8,6 +8,7 @@ import { Filter } from '@/components/filter';
 
 export default function Maps() {
     const [day, setDay] = useState(calculateCurrentEventDay() || 1);
+    const [dayPc, setDayPc] = useState(calculateCurrentEventDay() || 1);
     const [barracas, setBarracas] = useState({
         comes_e_bebes: true,
         venda_de_carne: true,
@@ -35,7 +36,7 @@ export default function Maps() {
                     isMobile ? 'h-[450px]' : 'h-[600px]'
                 }`}
             >
-                <Map day={day} barracaState={barracas} />
+                <Map day={day} dayPc={dayPc} barracaState={barracas} />
             </div>
 
             {isMobile && (
@@ -46,7 +47,9 @@ export default function Maps() {
 
             <Filter
                 day={day}
+                dayPc={dayPc}
                 setDay={setDay}
+                setDayPc={setDayPc}
                 barracas={barracas}
                 setBarracas={setBarracas}
             />

@@ -44,7 +44,14 @@ const outros = [
     { slug: 'Sanitários', name: 'Sanitários' },
 ];
 
-export function Filter({ day, setDay, barracas, setBarracas }) {
+export function Filter({
+    day,
+    dayPc,
+    setDay,
+    setDayPc,
+    barracas,
+    setBarracas,
+}) {
     return (
         <div className='flex flex-col my-2 p-2 max-w-4xl'>
             <h1 className='mb-2 pb-2 font-bold text-xl'>Filtros</h1>
@@ -125,29 +132,58 @@ export function Filter({ day, setDay, barracas, setBarracas }) {
                     </div>
                 </fieldset>
 
-                <fieldset className='bg-base-100 p-4 border border-base-300 rounded-box'>
+                {/* start */}
+                <fieldset className='bg-base-100 p-4 border border-base-300 rounded-box w-full'>
                     <legend className='fieldset-legend'>
                         Serviço Municipal de Proteção Civil - Meios
                     </legend>
-                    <div className='gap-5 columns-1 md:columns-2 my-2 max-w-4xl'>
-                        {pcivil.map((barraca) => (
-                            <label className='mx-4 label' key={barraca.slug}>
-                                <input
-                                    type='checkbox'
-                                    className='checkbox'
-                                    checked={barracas[barraca.slug]}
-                                    onChange={() =>
-                                        setBarracas((prev) => ({
-                                            ...prev,
-                                            [barraca.slug]: !prev[barraca.slug],
-                                        }))
-                                    }
-                                />
-                                <span className='ml-2'>{barraca.name}</span>
-                            </label>
-                        ))}
+                    <div className='flex md:flex-row flex-col gap-5 my-2 w-full'>
+                        <label className='label'>
+                            <input
+                                type='radio'
+                                name='pc'
+                                className='radio'
+                                onChange={() => setDayPc(1)}
+                                defaultChecked={dayPc === 1 ? true : false}
+                            />
+                            Dias 11, 12 e 13
+                        </label>
+
+                        <label className='label'>
+                            <input
+                                type='radio'
+                                name='pc'
+                                className='radio'
+                                onChange={() => setDayPc(2)}
+                                defaultChecked={dayPc === 2 ? true : false}
+                            />
+                            Dias 14 e 15
+                        </label>
+
+                        <label className='label'>
+                            <input
+                                type='radio'
+                                name='pc'
+                                className='radio'
+                                onChange={() => setDayPc(3)}
+                                defaultChecked={dayPc === 3 ? true : false}
+                            />
+                            Dia 17
+                        </label>
+
+                        <label className='label'>
+                            <input
+                                type='radio'
+                                name='pc'
+                                className='radio'
+                                onChange={() => setDayPc(0)}
+                                defaultChecked={dayPc === 0 ? true : false}
+                            />
+                            Ocultar informação
+                        </label>
                     </div>
                 </fieldset>
+                {/* finish */}
 
                 <fieldset className='bg-base-100 p-4 border border-base-300 rounded-box'>
                     <legend className='fieldset-legend'>
