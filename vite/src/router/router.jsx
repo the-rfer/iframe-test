@@ -1,12 +1,13 @@
-import { createBrowserRouter } from 'react-router';
-import Index from '@/pages/index/page.jsx';
-import App from '@/pages/app/page.jsx';
+import { DesktopNav, MobileNav } from '@/components/navbar';
+import Page from '@/pages/app/index';
+// import App from '@/pages/app/page.jsx';
 import Contacts from '@/pages/contact/page';
+import Festa from '@/pages/festa/page';
+import Index from '@/pages/index/page.jsx';
 import Information from '@/pages/info/page';
 import Maps from '@/pages/maps/page';
-import Page from '@/pages/app/index';
 import Media from '@/pages/media/page';
-import Festa from '@/pages/festa/page';
+import { createBrowserRouter } from 'react-router';
 
 const router = createBrowserRouter([
     {
@@ -15,31 +16,67 @@ const router = createBrowserRouter([
     },
     {
         path: '/app',
-        element: <App />,
+        // element: <App />,
         children: [
             {
                 index: true,
-                element: <Page />,
+                element: (
+                    <>
+                        <DesktopNav />
+                        <Page />
+                        <MobileNav />
+                    </>
+                ),
             },
             {
                 path: 'map',
-                element: <Maps />,
+                element: (
+                    <>
+                        <DesktopNav />
+                        <Maps />
+                        <MobileNav />
+                    </>
+                ),
             },
             {
                 path: 'info',
-                element: <Information />,
+                element: (
+                    <>
+                        <DesktopNav />
+                        <Information />
+                        <MobileNav />
+                    </>
+                ),
             },
             {
                 path: 'contact',
-                element: <Contacts />,
+                element: (
+                    <>
+                        <DesktopNav />
+                        <Contacts />
+                        <MobileNav />
+                    </>
+                ),
             },
             {
                 path: 'midia',
-                element: <Media />,
+                element: (
+                    <>
+                        <DesktopNav />
+                        <Media />
+                        <MobileNav />
+                    </>
+                ),
             },
             {
                 path: 'festa',
-                element: <Festa />,
+                element: (
+                    <>
+                        <DesktopNav />
+                        <Festa />
+                        <MobileNav />
+                    </>
+                ),
             },
         ],
     },
