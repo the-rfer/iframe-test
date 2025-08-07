@@ -114,10 +114,31 @@ function Infos() {
                     Horários do Funchal
                 </div>
                 <div className='collapse-content text-sm'>
-                    O serviço excecional dos Horários do Funchal funcionará nos
-                    dias 14 de agosto (18:00-04:00) e 15 de agosto
-                    (09:30-18:30), com tarifas especiais de 1,80 € ida e 3,20 €
-                    ida e volta.
+                    Carreiras | Routes: 20, 21, 22 e 48 <br />
+                    Alterações | Changes: English translation at
+                    https://bit.ly/2Qq1HaH <br />
+                    <br /> Devido à realização de Novenas, Arraial do Monte e
+                    procissão, somos forçados a proceder às seguintes
+                    alterações:
+                    <br />
+                    <br /> - Data: 11, 12 e 13/08/2025 das 18h00 às 01h00, dia
+                    14/08 entre as 12h00 do e as 04h00 do dia 15/08, dia 15/08
+                    das 08h00 às 19h00 e dia 17/08 das 14h00 às 21h00.
+                    <br />
+                    <br /> Carreira nº 20
+                    <br /> Efetua o itinerário normal até ao Tanque,
+                    prosseguindo, via Largo da Fonte e Corujeira de Dentro –
+                    circulação.
+                    <br />
+                    <br /> Carreiras nºs 21 e 48
+                    <br /> Efetuam o seu trajeto normal sem fazer acerto de
+                    horário, no Largo da Fonte.
+                    <br />
+                    <br /> - Data: entre as 12h00 do dia 14/08 e as 04h00 do dia
+                    15/08 e ainda 15/08 das 08h00 às 19h00
+                    <br />
+                    <br /> Carreira nº 22
+                    <br /> Efetua término em Santa Teresinha.
                 </div>
             </div>
             <div className='collapse collapse-arrow border border-base-300'>
