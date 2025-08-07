@@ -99,7 +99,8 @@ export default function Map({ day, dayPc, barracaState }) {
             zoomControl={true}
             zoom={16}
             minZoom={16}
-            center={[32.676623, -16.900641]}
+            // center={[32.676623, -16.900641]} //coords antigas
+            center={[32.676726, -16.903124]}
             maxBoundsViscosity={1.0}
             maxBounds={[
                 [32.66, -16.92], // Moved southwest (lower-left) corner down and left
