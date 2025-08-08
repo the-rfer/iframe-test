@@ -153,6 +153,18 @@ function Infos() {
                     central.
                 </div>
             </div>
+            <div className='collapse collapse-arrow border border-base-300'>
+                <input type='radio' name='my-accordion-2' />
+                <div className='collapse-title font-semibold'>
+                    Polícia de Segurança Pública
+                </div>
+                <div className='collapse-content text-sm'>
+                    A Polícia de Segurança Pública contará com cerca de 160
+                    elementos presentes na Festa do Monte, garantindo a
+                    segurança e o bom funcionamento do evento entre os dias 11 e
+                    17 de agosto.
+                </div>
+            </div>
         </div>
     );
 }
